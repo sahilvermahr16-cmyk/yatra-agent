@@ -109,7 +109,7 @@ This saves three files:
 | `"4 days in Udaipur for 2 people, must see City Palace, love lakes, max 15000 total"` | over budget; the agent changes the plan to fit |
 | `"jaipur 2 din ghumna h 10k me"` | Hinglish works too |
 | `"3 days in Rajasthan, I like palaces"` | a state; the agent picks the city |
-| `"I want a relaxing vacation, you choose"` | an unclear goal; the agent stops and asks for a city |
+| `"I want a relaxing vacation, you choose"` | an unclear goal; the agent stops before planning and says it needs a city or state |
 
 `--inject-failure` can be `weather_timeout`, `places_timeout`, `geocode_timeout` or `osm_timeout`.
 
@@ -155,14 +155,15 @@ This runs 241 tests. They need no key and spend nothing.
 
 | Stage | Done by | What happens |
 |---|---|---|
-| 1. Read the goal | LLM | Picks out the city, dates, budget, must-see places and interests |
+| 1. Read the goal | LLM | Picks out the city, dates, travellers, budget, must-see places and interests; code checks them, 1 retry |
 | 2. Complete the request | code | Turns them into exact dates and rupees; fills defaults and says so |
-| 3. Plan | LLM, checked by code | Writes the list of steps before acting; a wrong plan is retried |
-| 4. Execute | tools | Runs each step; a failed step becomes a note, not a crash |
-| 5. Build the days | code | Most important places first, nearby places together, indoor places on rainy days |
-| 6. Stays and food | tools + code | A hotel near each day's places, meals, and the timing of every day |
-| 7. Budget check | code | Prices the trip; if it is over budget, the LLM picks changes and code applies them (up to 3 rounds) |
-| 8. Report | code | Markdown and JSON with the plan, every tool call, notes and assumptions |
+| 3. Plan | LLM, checked by code | Writes the list of steps before acting; a wrong plan is retried once, else a default plan is used |
+| 4. Execute | code, calling tools | Runs each step; a failed step becomes a note, not a crash |
+| 5a. Build the days | code | Most important places first, nearby places together, indoor places on rainy days |
+| 5b. Stays and food | code + OpenStreetMap | A hotel near the next day's places, meals, a rest, and the timing of every day |
+| 6. Budget check | code | Prices the trip and compares it with the budget |
+| 7. Replan | LLM chooses, code applies | Outside the budget: the LLM picks from the allowed changes; code applies them, re-picks the hotel, meals and timeline, and checks the budget again (up to 3 rounds) |
+| 8. Report | code | A Markdown report (plan, steps, days, cost, notes, assumptions, sources) and JSON that also records every tool call |
 
 The tools (all free, no key): Open-Meteo (place search and weather), Wikivoyage (travel guide), Wikipedia (sights), OpenStreetMap (hotels and food), and a cost calculator in code.
 

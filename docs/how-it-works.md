@@ -16,13 +16,13 @@ A **LangGraph** state machine (`graph.py`) with one shared state (`state.py`). E
 | 2 | `normalize` | code | Calendar dates, nights, travellers, budget ceiling / floor in rupees for the whole group; every default becomes a note |
 | 3 | `planner` | LLM | An ordered tool plan with a reason per step. Code checks it (one step per wish, the right order, weather only inside the forecast range); one retry with the problems listed; else a default plan |
 | 4 | `executor` | code | Runs the data steps in order through one handler per tool; a failure or an unmet wish becomes a note, never a crash |
-| 5 | `itinerary` | code | Picks places by priority (must-visit → kinds of place → interests → popular), groups nearby ones into days, puts indoor places on rainy days |
-| 6 | `stays` | code | One OpenStreetMap query: a hotel each night near the next day's places, breakfast, lunch, a 1-hour rest, dinner or street food; times every day; a place that would end after 19:00 moves to "if you have more time" |
-| 7 | `budget_check` | code | Prices the plan (assumed price table) and compares it with the ceiling / floor |
-| 8 | `replanner` | LLM + code | Code lists only the changes that are allowed and what each saves; the LLM chooses; code applies them and checks again (at most 3 rounds) |
-| 9 | `reporter` | code | Builds the `TripReport` (JSON) and the Markdown report |
+| 5a | `itinerary` | code | Picks places by priority (must-visit → kinds of place → interests → popular), groups nearby ones into days, puts indoor places on rainy days |
+| 5b | `stays` | code | One OpenStreetMap query: a hotel each night near the next day's places, breakfast, lunch, a 1-hour rest, dinner or street food; times every day; a place that would end after 19:00 moves to "if you have more time" |
+| 6 | `budget_check` | code | Prices the plan (assumed price table) and compares it with the ceiling / floor |
+| 7 | `replanner` | LLM + code | Code lists only the changes that are allowed and what each saves; the LLM chooses; code applies them, re-picks the hotel, meals and timeline from the saved OpenStreetMap data, and sends the plan back to `budget_check` (at most 3 rounds) |
+| 8 | `reporter` | code | Builds the `TripReport` (JSON) and the Markdown report |
 
-Routes: no destination → straight to the reporter (`needs_city`); the city cannot be placed → reporter (`needs_city` or `gave_up`); over budget with a change still possible → replanner → budget_check again.
+Routes: no destination → straight to the reporter (`needs_city`); the city cannot be placed → reporter (`needs_city` or `gave_up`); outside the budget (over the ceiling or under the floor) with a change still possible → replanner → budget_check again; within the budget, nothing left to change or 3 rounds used → reporter.
 
 ---
 
@@ -63,7 +63,7 @@ Every one of these shows up as a line in the console (yellow "self-correction") 
 | Wikipedia search down (`places_timeout`) | Each failed search becomes a note; the days stay free rather than invented | Panel 4, report notes |
 | OpenStreetMap busy or down (`osm_timeout`, and often for real) | Each of 4 servers is asked once (a quick refusal once more after 3 s); then the days are still timed but name no hotel or restaurant | "handled: osm …" with every server's reason |
 | Geocoding down (`geocode_timeout`) | Stops cleanly with status `gave_up` and the reason | Report status and errors |
-| Ambiguous goal ("you choose") | Stops with `needs_city` and asks for a city | Report status and notes |
+| Ambiguous goal ("you choose") | Stops before planning with `needs_city` and says the goal needs a city or state | Report status and notes |
 | Place outside India ("Paris") | Not matched to an Indian village; `needs_city` with "does not seem to be in India" | Report notes |
 | LLM output that does not fit, or disagrees with the goal | One retry with the error or the problems; then a fallback or a clean stop | Trace events, yellow lines in the console |
 
