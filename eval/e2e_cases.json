@@ -1,0 +1,165 @@
+{
+  "note": "End-to-end cases, written 2026-10-13. Each case runs the whole agent once on live APIs. 'expect' holds what this case is about; every case is also checked against the general rules in run_e2e.py. Goals are new (not taken from the prompt examples or the extract eval sets).",
+  "cases": [
+    {
+      "id": "E-01",
+      "about": "normal city trip",
+      "goal": "2 days in Jaipur, we love forts",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Jaipur"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "about": "a state instead of a city",
+      "goal": "3 days in Rajasthan, I like palaces",
+      "expect": {
+        "status": "done",
+        "destination_type": "state",
+        "region": "Rajasthan"
+      }
+    },
+    {
+      "id": "E-03",
+      "about": "must-visit place far from the city",
+      "goal": "2 days in Jaipur, must see the Taj Mahal",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Jaipur"
+        ],
+        "notes_include": [
+          "is not in this plan"
+        ]
+      }
+    },
+    {
+      "id": "E-04",
+      "about": "tight budget: the replanner should bring it down",
+      "goal": "4 days in Udaipur for 2 people, must see City Palace, love lakes, max 15000 total",
+      "expect": {
+        "status": "done",
+        "replanned": true
+      }
+    },
+    {
+      "id": "E-05",
+      "about": "impossible budget: say so honestly",
+      "goal": "4 days in Goa for two people, under 2000 total",
+      "expect": {
+        "status": "done",
+        "verdict": "over",
+        "replanned": true,
+        "notes_include": [
+          "above your limit"
+        ]
+      }
+    },
+    {
+      "id": "E-06",
+      "about": "no budget given: a guide only, no replanning",
+      "goal": "3 days in Varanasi",
+      "expect": {
+        "status": "done",
+        "no_ceiling": true,
+        "replanned": false
+      }
+    },
+    {
+      "id": "E-07",
+      "about": "ambiguous instruction: no destination",
+      "goal": "plan a trip somewhere nice in the mountains for 3 days",
+      "expect": {
+        "status": "needs_city"
+      }
+    },
+    {
+      "id": "E-08",
+      "about": "destination outside India",
+      "goal": "3 days in Paris, love museums",
+      "expect": {
+        "status": "needs_city"
+      }
+    },
+    {
+      "id": "E-09",
+      "about": "Hinglish goal",
+      "goal": "jaipur 2 din ghumna h 10k me, khana pina pasand h",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Jaipur"
+        ],
+        "ceiling": 10000
+      }
+    },
+    {
+      "id": "E-10",
+      "about": "dates beyond the 16-day forecast",
+      "goal": "4 days in Jodhpur from 20 December",
+      "expect": {
+        "status": "done",
+        "notes_include": [
+          "forecast"
+        ]
+      }
+    },
+    {
+      "id": "E-11",
+      "about": "induced failure: weather API times out",
+      "goal": "2 days in Amritsar, must visit the Golden Temple",
+      "inject": "weather_timeout",
+      "expect": {
+        "status": "done",
+        "errors_where": [
+          "weather"
+        ],
+        "notes_include": [
+          "forecast could not be fetched"
+        ]
+      }
+    },
+    {
+      "id": "E-12",
+      "about": "induced failure: Wikipedia place search times out",
+      "goal": "2 days in Mysore, love palaces",
+      "inject": "places_timeout",
+      "expect": {
+        "status": "done",
+        "errors_where": [
+          "places"
+        ]
+      }
+    },
+    {
+      "id": "E-13",
+      "about": "induced failure: OpenStreetMap times out (days still timed)",
+      "goal": "2 days in Agra, must see Agra Fort",
+      "inject": "osm_timeout",
+      "expect": {
+        "status": "done",
+        "errors_where": [
+          "osm"
+        ]
+      }
+    },
+    {
+      "id": "E-14",
+      "about": "induced failure: geocoding times out (recover from Wikivoyage or stop cleanly)",
+      "goal": "2 days in Kochi",
+      "inject": "geocode_timeout",
+      "expect": {
+        "status": [
+          "done",
+          "gave_up"
+        ],
+        "errors_where": [
+          "geocode"
+        ]
+      }
+    }
+  ]
+}

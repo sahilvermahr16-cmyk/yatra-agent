@@ -1,0 +1,1178 @@
+{
+  "goal": "3 days in Jodhpur next weekend, must see Mehrangarh Fort, love stepwells and street food, under 20k for two",
+  "status": "done",
+  "created_at": "2026-10-14T09:37:01.404423",
+  "request": {
+    "destination": "Jodhpur",
+    "start": {
+      "phrase": "next weekend",
+      "kind": "weekend",
+      "day": null,
+      "month": null,
+      "year": null,
+      "offset_days": null,
+      "weekday": null,
+      "which": "next"
+    },
+    "end": null,
+    "days": 3,
+    "travellers": 2,
+    "budget_phrase": "under 20k for two",
+    "budget_amount": 20000.0,
+    "budget_amount_max": null,
+    "budget_is_per_person": false,
+    "budget_is_per_day": false,
+    "budget_direction": "at_most",
+    "budget_style": null,
+    "must_visit": [
+      "Mehrangarh Fort"
+    ],
+    "place_types": [
+      {
+        "words": "stepwells",
+        "interests": [
+          "popular"
+        ]
+      },
+      {
+        "words": "street food",
+        "interests": [
+          "food"
+        ]
+      }
+    ],
+    "interests": [
+      "popular",
+      "food"
+    ],
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-26",
+    "destination_type": null,
+    "base_city": null,
+    "nights": 2,
+    "total_budget": 20000.0,
+    "budget_ceiling": 20000.0,
+    "budget_floor": null
+  },
+  "destination": {
+    "query": "Jodhpur",
+    "destination_type": "city",
+    "wikivoyage_title": "Jodhpur",
+    "candidates": [],
+    "base_city": "Jodhpur",
+    "choice_reason": "Jodhpur was named by the user.",
+    "location": {
+      "name": "Jodhpur",
+      "lat": 26.26841,
+      "lon": 73.00594,
+      "region": "Rajasthan",
+      "feature_code": "PPL",
+      "population": 1056191,
+      "source": "Open-Meteo geocoding"
+    },
+    "used_fallback": false
+  },
+  "plan": {
+    "summary": "3 days in Jodhpur around the Mehrangarh Fort, stepwells, and street food.",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "resolve_destination",
+        "query": null,
+        "serves": null,
+        "reason": "Find Jodhpur on the map; every later step searches around it."
+      },
+      {
+        "step": 2,
+        "tool": "weather",
+        "query": null,
+        "serves": null,
+        "reason": "The trip starts in 10 days, so the forecast can guide outdoor plans."
+      },
+      {
+        "step": 3,
+        "tool": "locate_place",
+        "query": "Mehrangarh Fort",
+        "serves": "must_visit",
+        "reason": "You must see the Mehrangarh Fort."
+      },
+      {
+        "step": 4,
+        "tool": "find_places",
+        "query": "stepwell",
+        "serves": "place_type",
+        "reason": "You want to see stepwells; 'stepwell' is what such a place is called."
+      },
+      {
+        "step": 5,
+        "tool": "find_places",
+        "query": "street food",
+        "serves": "place_type",
+        "reason": "You want to experience street food; 'street food' is what such a place is called."
+      },
+      {
+        "step": 6,
+        "tool": "find_places",
+        "query": "tourist attraction",
+        "serves": "popular",
+        "reason": "Fill the free time with Jodhpur's best-known sights."
+      },
+      {
+        "step": 7,
+        "tool": "build_itinerary",
+        "query": null,
+        "serves": null,
+        "reason": "Put the places into days, most important first."
+      },
+      {
+        "step": 8,
+        "tool": "find_stays_and_food",
+        "query": null,
+        "serves": null,
+        "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+      },
+      {
+        "step": 9,
+        "tool": "estimate_costs",
+        "query": null,
+        "serves": null,
+        "reason": "Price the stay, food, travel and tickets."
+      },
+      {
+        "step": 10,
+        "tool": "check_budget",
+        "query": null,
+        "serves": null,
+        "reason": "Compare the cost with your budget."
+      }
+    ]
+  },
+  "step_results": [
+    {
+      "step": 1,
+      "tool": "resolve_destination",
+      "ok": true,
+      "summary": "city -> base city Jodhpur (26.268, 73.006)"
+    },
+    {
+      "step": 2,
+      "tool": "weather",
+      "ok": true,
+      "summary": "3 day(s) of forecast, 0 likely rainy"
+    },
+    {
+      "step": 3,
+      "tool": "locate_place",
+      "ok": true,
+      "summary": "Mehrangarh found, 3.5 km from Jodhpur"
+    },
+    {
+      "step": 4,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'stepwell': 1 found, 1 new (Toorji Ka Jhalra)"
+    },
+    {
+      "step": 5,
+      "tool": "find_places",
+      "ok": false,
+      "summary": "'street food': 0 found, 0 new"
+    },
+    {
+      "step": 6,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'tourist attraction': 5 found, 4 new (Jaswant Thada, Kaylana Lake, Ghanta Ghar (Jodhpur)...)"
+    }
+  ],
+  "weather": [
+    {
+      "date": "2026-10-24",
+      "temp_max_c": 36.7,
+      "temp_min_c": 23.5,
+      "rain_probability": 0,
+      "summary": "Clear sky"
+    },
+    {
+      "date": "2026-10-25",
+      "temp_max_c": 37.2,
+      "temp_min_c": 24.0,
+      "rain_probability": 3,
+      "summary": "Clear sky"
+    },
+    {
+      "date": "2026-10-26",
+      "temp_max_c": 37.3,
+      "temp_min_c": 24.5,
+      "rain_probability": 10,
+      "summary": "Mainly clear"
+    }
+  ],
+  "itinerary": {
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-10-24",
+        "weather": {
+          "date": "2026-10-24",
+          "temp_max_c": 36.7,
+          "temp_min_c": 23.5,
+          "rain_probability": 0,
+          "summary": "Clear sky"
+        },
+        "places": [
+          {
+            "name": "Mehrangarh",
+            "lat": 26.29805556,
+            "lon": 73.01888889,
+            "distance_km": 3.5,
+            "description": "Medieval fort in Jodhpur, Rajasthan, India",
+            "serves": "must_visit",
+            "wish": "Mehrangarh Fort",
+            "category": "popular",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Mehrangarh",
+            "pageviews": 13406,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Toorji Ka Jhalra",
+            "lat": 26.29713,
+            "lon": 73.02305,
+            "distance_km": 3.6,
+            "description": "Building in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "stepwells",
+            "category": "popular",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Toorji_Ka_Jhalra",
+            "pageviews": 130,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Mehrangarh (must visit); Toorji Ka Jhalra (you wanted stepwells). All within 0.4 km of each other. Clear sky, 24-37 C, rain 0%.",
+        "stay": {
+          "name": "MH Guest House",
+          "kind": "hotel",
+          "lat": 26.2980248,
+          "lon": 73.0209014,
+          "distance_km": 0.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/7067011725"
+        },
+        "breakfast": {
+          "name": "Café Mehran",
+          "kind": "cafe",
+          "lat": 26.2988303,
+          "lon": 73.0195342,
+          "distance_km": 0.1,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12059843707"
+        },
+        "lunch": {
+          "name": "Open House",
+          "kind": "restaurant",
+          "lat": 26.2970955,
+          "lon": 73.0227919,
+          "distance_km": 0.0,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5354108823"
+        },
+        "food_stop": {
+          "name": "King of Omelettes",
+          "kind": "fast_food",
+          "lat": 26.295825,
+          "lon": 73.0236207,
+          "distance_km": 0.2,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/4045582751"
+        },
+        "dinner": null,
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "08:15:00",
+            "end": "08:15:00",
+            "kind": "start",
+            "title": "Arrive in Jodhpur",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:15:00",
+            "end": "08:40:00",
+            "kind": "travel",
+            "title": "→ by road 4.7 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:40:00",
+            "end": "08:55:00",
+            "kind": "bags",
+            "title": "Drop the bags at MH Guest House",
+            "detail": "check-in is later",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          },
+          {
+            "start": "08:55:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Café Mehran",
+            "detail": "cafe, 0.1 km",
+            "url": "https://www.openstreetmap.org/node/12059843707"
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:50:00",
+            "kind": "travel",
+            "title": "→ walk 0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:50:00",
+            "end": "12:20:00",
+            "kind": "visit",
+            "title": "Mehrangarh",
+            "detail": "must visit",
+            "url": "https://en.wikipedia.org/wiki/Mehrangarh"
+          },
+          {
+            "start": "12:20:00",
+            "end": "12:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:30:00",
+            "end": "13:15:00",
+            "kind": "visit",
+            "title": "Toorji Ka Jhalra",
+            "detail": "for: stepwells",
+            "url": "https://en.wikipedia.org/wiki/Toorji_Ka_Jhalra"
+          },
+          {
+            "start": "13:15:00",
+            "end": "13:20:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "13:20:00",
+            "end": "14:20:00",
+            "kind": "lunch",
+            "title": "Lunch at Open House",
+            "detail": "restaurant, <0.1 km",
+            "url": "https://www.openstreetmap.org/node/5354108823"
+          },
+          {
+            "start": "14:20:00",
+            "end": "15:20:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "15:20:00",
+            "end": "19:25:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Toorji Ka Jhalra",
+            "url": null
+          },
+          {
+            "start": "19:25:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "food",
+            "title": "Street food at King of Omelettes",
+            "detail": "fast food, 0.2 km",
+            "url": "https://www.openstreetmap.org/node/4045582751"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:40:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:40:00",
+            "end": "20:40:00",
+            "kind": "stay",
+            "title": "Check in at MH Guest House",
+            "detail": "hotel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "date": "2026-10-25",
+        "weather": {
+          "date": "2026-10-25",
+          "temp_max_c": 37.2,
+          "temp_min_c": 24.0,
+          "rain_probability": 3,
+          "summary": "Clear sky"
+        },
+        "places": [
+          {
+            "name": "Jaswant Thada",
+            "lat": 26.30388889,
+            "lon": 73.02527778,
+            "distance_km": 4.4,
+            "description": "Cenotaph in Jodhpur, Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "history",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Jaswant_Thada",
+            "pageviews": 2421,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Rao Jodha Desert Rock Park",
+            "lat": 26.304611,
+            "lon": 73.016853,
+            "distance_km": 4.2,
+            "description": "Park in Jodhpur, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Rao_Jodha_Desert_Rock_Park",
+            "pageviews": 419,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Jaswant Thada (popular sight); Rao Jodha Desert Rock Park (popular sight). All within 0.8 km of each other. Clear sky, 24-37 C, rain 3%.",
+        "stay": {
+          "name": "MH Guest House",
+          "kind": "hotel",
+          "lat": 26.2980248,
+          "lon": 73.0209014,
+          "distance_km": 2.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/7067011725"
+        },
+        "breakfast": {
+          "name": "Stepwell Café",
+          "kind": "cafe",
+          "lat": 26.2972229,
+          "lon": 73.0227977,
+          "distance_km": 0.8,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5176020621"
+        },
+        "lunch": {
+          "name": "Anna Café and Restaurant",
+          "kind": "restaurant",
+          "lat": 26.3017996,
+          "lon": 73.0229461,
+          "distance_km": 0.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/13720846501"
+        },
+        "food_stop": {
+          "name": "Street Food Café",
+          "kind": "fast_food",
+          "lat": 26.298193,
+          "lon": 73.0207603,
+          "distance_km": 0.8,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/14061749726"
+        },
+        "dinner": null,
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "08:55:00",
+            "end": "08:55:00",
+            "kind": "start",
+            "title": "Leave MH Guest House",
+            "detail": "",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          },
+          {
+            "start": "08:55:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ walk 0.3 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Stepwell Café",
+            "detail": "cafe, 0.8 km",
+            "url": "https://www.openstreetmap.org/node/5176020621"
+          },
+          {
+            "start": "09:45:00",
+            "end": "10:00:00",
+            "kind": "travel",
+            "title": "→ by road 1.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "10:00:00",
+            "end": "10:45:00",
+            "kind": "visit",
+            "title": "Jaswant Thada",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Jaswant_Thada"
+          },
+          {
+            "start": "10:45:00",
+            "end": "11:00:00",
+            "kind": "travel",
+            "title": "→ by road 1.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:00:00",
+            "end": "12:00:00",
+            "kind": "visit",
+            "title": "Rao Jodha Desert Rock Park",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Rao_Jodha_Desert_Rock_Park"
+          },
+          {
+            "start": "12:00:00",
+            "end": "12:15:00",
+            "kind": "travel",
+            "title": "→ walk 0.9 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:15:00",
+            "end": "13:15:00",
+            "kind": "lunch",
+            "title": "Lunch at Anna Café and Restaurant",
+            "detail": "restaurant, 0.7 km",
+            "url": "https://www.openstreetmap.org/node/13720846501"
+          },
+          {
+            "start": "13:15:00",
+            "end": "14:15:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "14:15:00",
+            "end": "19:20:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Rao Jodha Desert Rock Park",
+            "url": null
+          },
+          {
+            "start": "19:20:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "food",
+            "title": "Street food at Street Food Café",
+            "detail": "fast food, 0.8 km",
+            "url": "https://www.openstreetmap.org/node/14061749726"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:35:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:35:00",
+            "end": "20:35:00",
+            "kind": "stay",
+            "title": "Night at MH Guest House",
+            "detail": "hotel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "date": "2026-10-26",
+        "weather": {
+          "date": "2026-10-26",
+          "temp_max_c": 37.3,
+          "temp_min_c": 24.5,
+          "rain_probability": 10,
+          "summary": "Mainly clear"
+        },
+        "places": [
+          {
+            "name": "Kaylana Lake",
+            "lat": 26.28333333,
+            "lon": 72.96666667,
+            "distance_km": 4.3,
+            "description": "Artificial lake in Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Kaylana_Lake",
+            "pageviews": 609,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Ghanta Ghar (Jodhpur)",
+            "lat": 26.295122,
+            "lon": 73.024044,
+            "distance_km": 3.5,
+            "description": "Clock tower in Jodhpur, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "popular",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Ghanta_Ghar_(Jodhpur)",
+            "pageviews": 583,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Kaylana Lake (popular sight); Ghanta Ghar (Jodhpur) (popular sight). All within 5.9 km of each other. Mainly clear, 24-37 C, rain 10%.",
+        "stay": null,
+        "breakfast": null,
+        "lunch": {
+          "name": "Om Juice Corner",
+          "kind": "restaurant",
+          "lat": 26.2955768,
+          "lon": 73.0237422,
+          "distance_km": 0.1,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5335461921"
+        },
+        "food_stop": {
+          "name": "Mahadev Khana Khajana",
+          "kind": "fast_food",
+          "lat": 26.295614,
+          "lon": 73.0236547,
+          "distance_km": 0.1,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/13418009697"
+        },
+        "dinner": null,
+        "day_notes": [
+          "No cafe or restaurant was found within 1.5 km of Kaylana Lake on OpenStreetMap; have breakfast near your stay before leaving."
+        ],
+        "timeline": [
+          {
+            "start": "08:25:00",
+            "end": "08:25:00",
+            "kind": "start",
+            "title": "Check out of MH Guest House",
+            "detail": "leave the bags at the desk",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          },
+          {
+            "start": "08:25:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ by road 7.3 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast near your stay",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:55:00",
+            "kind": "travel",
+            "title": "→ to Kaylana Lake",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:55:00",
+            "end": "10:55:00",
+            "kind": "visit",
+            "title": "Kaylana Lake",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Kaylana_Lake"
+          },
+          {
+            "start": "10:55:00",
+            "end": "11:30:00",
+            "kind": "travel",
+            "title": "→ by road 7.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:30:00",
+            "end": "12:00:00",
+            "kind": "visit",
+            "title": "Ghanta Ghar",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Ghanta_Ghar_(Jodhpur)"
+          },
+          {
+            "start": "12:00:00",
+            "end": "12:05:00",
+            "kind": "travel",
+            "title": "→ walk 0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:05:00",
+            "end": "13:05:00",
+            "kind": "lunch",
+            "title": "Lunch at Om Juice Corner",
+            "detail": "restaurant, 0.1 km",
+            "url": "https://www.openstreetmap.org/node/5335461921"
+          },
+          {
+            "start": "13:05:00",
+            "end": "14:05:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "14:05:00",
+            "end": "19:25:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Ghanta Ghar",
+            "url": null
+          },
+          {
+            "start": "19:25:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "food",
+            "title": "Street food at Mahadev Khana Khajana",
+            "detail": "fast food, 0.1 km",
+            "url": "https://www.openstreetmap.org/node/13418009697"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:40:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:40:00",
+            "end": "20:55:00",
+            "kind": "bags",
+            "title": "Collect the bags from MH Guest House",
+            "detail": "",
+            "url": "https://www.openstreetmap.org/node/7067011725"
+          },
+          {
+            "start": "20:55:00",
+            "end": "20:55:00",
+            "kind": "end",
+            "title": "End of the trip",
+            "detail": "",
+            "url": null
+          }
+        ]
+      }
+    ],
+    "unused": [],
+    "notes": []
+  },
+  "cost": {
+    "hotel": 6000.0,
+    "food": 7200.0,
+    "local_travel": 4500.0,
+    "tickets": 1200.0,
+    "total": 18900.0,
+    "choices": {
+      "hotel_tier": "mid",
+      "food_tier": "mid",
+      "transport": "cab",
+      "hotel_outside_centre": false
+    },
+    "rooms": 1,
+    "vehicles": 1
+  },
+  "verdict": {
+    "status": "within",
+    "total": 18900.0,
+    "ceiling": 20000.0,
+    "floor": null,
+    "gap": 0.0
+  },
+  "first_cost": 18900.0,
+  "replan_rounds": 0,
+  "budget_changes": [],
+  "notes": [
+    "Because you chose Mehrangarh Fort, other historic sights were preferred among the popular ones.",
+    "Wikipedia had no places for 'street food', so food spots from OpenStreetMap were added to the days instead."
+  ],
+  "errors": [],
+  "assumptions": [
+    "Prices are assumed (there is no free live price API for India): hotel Rs 3,000 per room per night (mid), food Rs 1,200 per person per day (mid), cab Rs 1,500 per day (config.py).",
+    "Each sight is assumed to cost Rs 100 per person to enter; 2 people share a room and 4 share a cab.",
+    "Sights come from Wikipedia within 25 km of the base city; 'popular' means most read on Wikipedia in the last 60 days.",
+    "Must-visit places farther than 60 km from the base city are not planned.",
+    "Weather comes from the Open-Meteo forecast, which reaches 16 days ahead.",
+    "At most 3 places are planned per day.",
+    "Stays and places to eat come from OpenStreetMap, which has no prices or ratings: a stay is chosen for the planned price level and for being near the next day's places, not for its quality.",
+    "A hotel 3-8 km outside the centre is assumed to cost 25% less.",
+    "The traveller reaches the city early on day 1, goes to the first night's hotel and leaves the bags at the desk (15 min; check-in is later), and is at breakfast by 09:00. On the last day the bags stay at the hotel desk after check-out and are collected in the evening. Arrival and departure travel to the city are not planned.",
+    "Each day runs from 09:00 (breakfast, 45 min); sightseeing ends by 19:00, and a place that would end later moves to 'If you have more time'. Lunch (60 min) comes between 11:30 and 14:30, followed by 1 h of rest; the evening meal is at 19:30.",
+    "Visit lengths are assumed by kind of place (fort, fortress, zoo 2 h 30 min; palace 2 h; museum, gallery, market 1 h 30 min; temple, mandir, lake 1 h; cenotaph, stepwell, baori 45 min; clock tower, gate, statue 30 min; other places 1 h). Travel: up to 1 km is walked at 4.5 km/h; longer trips go by road at 20 km/h plus 10 min to find a ride, with roads 1.3x the straight-line distance."
+  ],
+  "sources": [
+    "Open-Meteo geocoding and forecast: https://open-meteo.com",
+    "Wikipedia (places, descriptions, page views): https://en.wikipedia.org",
+    "OpenStreetMap via the Overpass API (stays and places to eat): https://www.openstreetmap.org",
+    "Wikivoyage: https://en.wikivoyage.org/wiki/Jodhpur"
+  ],
+  "trace": [
+    {
+      "node": "extract",
+      "event": "llm_extract",
+      "detail": {
+        "destination": "Jodhpur",
+        "start": {
+          "phrase": "next weekend",
+          "kind": "weekend",
+          "day": null,
+          "month": null,
+          "year": null,
+          "offset_days": null,
+          "weekday": null,
+          "which": "next"
+        },
+        "end": null,
+        "days": 3,
+        "travellers": 2,
+        "budget_phrase": "under 20k for two",
+        "budget_amount": 20000.0,
+        "budget_amount_max": null,
+        "budget_is_per_person": false,
+        "budget_is_per_day": false,
+        "budget_direction": "at_most",
+        "budget_style": null,
+        "must_visit": [
+          "Mehrangarh Fort"
+        ],
+        "place_types": [
+          {
+            "words": "stepwells",
+            "interests": [
+              "popular"
+            ]
+          },
+          {
+            "words": "street food",
+            "interests": [
+              "food"
+            ]
+          }
+        ],
+        "interests": []
+      },
+      "duration_ms": 4426,
+      "timestamp": "2026-10-14T09:36:03.092264"
+    },
+    {
+      "node": "normalize",
+      "event": "normalize",
+      "detail": {
+        "days": 3,
+        "nights": 2,
+        "start_date": "2026-10-24",
+        "travellers": 2,
+        "total_budget": 20000.0,
+        "notes_added": 0
+      },
+      "duration_ms": 0,
+      "timestamp": "2026-10-14T09:36:03.101293"
+    },
+    {
+      "node": "planner",
+      "event": "llm_self_check_retry",
+      "detail": {
+        "problems": [
+          "- there are 2 kind of place wish(es) but 1 find_places step(s) for them",
+          "- there are 0 purpose that needs its own search wish(es) but 1 find_places step(s) for them"
+        ]
+      },
+      "duration_ms": null,
+      "timestamp": "2026-10-14T09:36:08.292209"
+    },
+    {
+      "node": "planner",
+      "event": "plan",
+      "detail": {
+        "facts": "Trip facts:\n  Destination: \"Jodhpur\" (not in the list of Indian states)\n  Dates: 24 Oct – 26 Oct 2026, 3 days; the trip starts in 10 days; a forecast IS available\n  Travellers: 2\n  Budget: target Rs 20,000 for the whole group, must not cost more than Rs 20,000\n  Style: not stated\n  Must visit: Mehrangarh Fort\n  Kinds of place: \"stepwells\" (popular); \"street food\" (food)\n  Purposes: food (already served by a kind of place)",
+        "summary": "3 days in Jodhpur around the Mehrangarh Fort, stepwells, and street food.",
+        "steps": [
+          {
+            "step": 1,
+            "tool": "resolve_destination",
+            "query": null,
+            "serves": null,
+            "reason": "Find Jodhpur on the map; every later step searches around it."
+          },
+          {
+            "step": 2,
+            "tool": "weather",
+            "query": null,
+            "serves": null,
+            "reason": "The trip starts in 10 days, so the forecast can guide outdoor plans."
+          },
+          {
+            "step": 3,
+            "tool": "locate_place",
+            "query": "Mehrangarh Fort",
+            "serves": "must_visit",
+            "reason": "You must see the Mehrangarh Fort."
+          },
+          {
+            "step": 4,
+            "tool": "find_places",
+            "query": "stepwell",
+            "serves": "place_type",
+            "reason": "You want to see stepwells; 'stepwell' is what such a place is called."
+          },
+          {
+            "step": 5,
+            "tool": "find_places",
+            "query": "street food",
+            "serves": "place_type",
+            "reason": "You want to experience street food; 'street food' is what such a place is called."
+          },
+          {
+            "step": 6,
+            "tool": "find_places",
+            "query": "tourist attraction",
+            "serves": "popular",
+            "reason": "Fill the free time with Jodhpur's best-known sights."
+          },
+          {
+            "step": 7,
+            "tool": "build_itinerary",
+            "query": null,
+            "serves": null,
+            "reason": "Put the places into days, most important first."
+          },
+          {
+            "step": 8,
+            "tool": "find_stays_and_food",
+            "query": null,
+            "serves": null,
+            "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+          },
+          {
+            "step": 9,
+            "tool": "estimate_costs",
+            "query": null,
+            "serves": null,
+            "reason": "Price the stay, food, travel and tickets."
+          },
+          {
+            "step": 10,
+            "tool": "check_budget",
+            "query": null,
+            "serves": null,
+            "reason": "Compare the cost with your budget."
+          }
+        ]
+      },
+      "duration_ms": 10770,
+      "timestamp": "2026-10-14T09:36:13.878817"
+    },
+    {
+      "node": "executor",
+      "event": "wikivoyage_ok",
+      "detail": {
+        "args": [
+          "Jodhpur"
+        ],
+        "attempts": 2
+      },
+      "duration_ms": 13475,
+      "timestamp": "2026-10-14T09:36:27.370795"
+    },
+    {
+      "node": "executor",
+      "event": "geocode_ok",
+      "detail": {
+        "args": [
+          "Jodhpur"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 4672,
+      "timestamp": "2026-10-14T09:36:32.043469"
+    },
+    {
+      "node": "executor",
+      "event": "weather_ok",
+      "detail": {
+        "args": [
+          "name='Jodhpur' lat=26.26841 lon=73.00594 region='Rajasthan' feature_code='PPL' population=1056191 source='Open-Meteo geocoding'",
+          "2026-10-24",
+          "2026-10-26",
+          "2026-10-14"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 2941,
+      "timestamp": "2026-10-14T09:36:34.985511"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "Mehrangarh Fort",
+          "name='Jodhpur' lat=26.26841 lon=73.00594 region='Rajasthan' feature_code='PPL' population=1056191 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1838,
+      "timestamp": "2026-10-14T09:36:36.823634"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "stepwell",
+          "name='Jodhpur' lat=26.26841 lon=73.00594 region='Rajasthan' feature_code='PPL' population=1056191 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 2515,
+      "timestamp": "2026-10-14T09:36:39.339606"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "street food",
+          "name='Jodhpur' lat=26.26841 lon=73.00594 region='Rajasthan' feature_code='PPL' population=1056191 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1612,
+      "timestamp": "2026-10-14T09:36:40.952794"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "tourist attraction",
+          "name='Jodhpur' lat=26.26841 lon=73.00594 region='Rajasthan' feature_code='PPL' population=1056191 source='Open-Meteo geocoding'",
+          "9",
+          "{'history'}"
+        ],
+        "attempts": 6
+      },
+      "duration_ms": 11929,
+      "timestamp": "2026-10-14T09:36:52.882596"
+    },
+    {
+      "node": "find_stays_and_food",
+      "event": "osm_ok",
+      "detail": {
+        "args": [
+          "[(26.297592780000002, 73.02096944499999), (26.304249945000002, 73.02106538999999), (26.289227665, 72.995355335)]",
+          "[(26.29805556, 73.01888889), (26.29713, 73.02305), (26.30388889, 73.02527778), (26.304611, 73.016853), (26.28333333, 72.96666667), (26.295122, 73.024044)]"
+        ],
+        "attempts": 1,
+        "found": {
+          "cafe": 13,
+          "fast_food": 10,
+          "food_court": 2,
+          "guest_house": 38,
+          "hostel": 21,
+          "hotel": 43,
+          "restaurant": 43
+        },
+        "server": "overpass-api.de"
+      },
+      "duration_ms": 8489,
+      "timestamp": "2026-10-14T09:37:01.384736"
+    },
+    {
+      "node": "budget_check",
+      "event": "cost",
+      "detail": {
+        "total": 18900.0,
+        "status": "within",
+        "gap": 0,
+        "choices": {
+          "hotel_tier": "mid",
+          "food_tier": "mid",
+          "transport": "cab",
+          "hotel_outside_centre": false
+        }
+      },
+      "duration_ms": null,
+      "timestamp": "2026-10-14T09:37:01.393920"
+    }
+  ]
+}

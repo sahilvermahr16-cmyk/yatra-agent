@@ -1,0 +1,103 @@
+{
+  "today": "2026-10-12",
+  "note": "Budget direction set, written 2026-10-13 with the budget_direction schema. Covers all five directions with phrasings not used in the prompt examples. First run is the unseen score.",
+  "cases": [
+    {
+      "id": "B-01",
+      "goal": "Mussoorie for 2 days, no more than 12000",
+      "expect": {
+        "destination": "Mussoorie",
+        "budget_amount": 12000,
+        "budget_amount_max": null,
+        "budget_direction": "at_most"
+      }
+    },
+    {
+      "id": "B-02",
+      "goal": "Shillong 4 days with my family, approximately 35k",
+      "expect": {
+        "destination": "Shillong",
+        "budget_amount": 35000,
+        "budget_is_per_person": false,
+        "budget_direction": "about"
+      }
+    },
+    {
+      "id": "B-03",
+      "goal": "Andaman for 6 days on our honeymoon, minimum 1 lakh, only the best resorts",
+      "expect": {
+        "budget_amount": 100000,
+        "budget_direction": "at_least"
+      }
+    },
+    {
+      "id": "B-04",
+      "goal": "Kutch for 3 days, somewhere between 10 and 14 thousand",
+      "expect": {
+        "destination": "Kutch",
+        "budget_amount": 10000,
+        "budget_amount_max": 14000,
+        "budget_direction": "range"
+      }
+    },
+    {
+      "id": "B-05",
+      "goal": "Pushkar 2 days for 4 of us, 12-15k per head",
+      "expect": {
+        "destination": "Pushkar",
+        "travellers": 4,
+        "budget_amount": 12000,
+        "budget_amount_max": 15000,
+        "budget_is_per_person": true,
+        "budget_direction": "range"
+      }
+    },
+    {
+      "id": "B-06",
+      "goal": "Mandu weekend, Rs 9000 total",
+      "expect": {
+        "destination": "Mandu",
+        "budget_amount": 9000,
+        "budget_direction": "not_stated"
+      }
+    },
+    {
+      "id": "B-07",
+      "goal": "Wayanad 3 days, spending more than 40k is fine, we want comfort",
+      "expect": {
+        "destination": "Wayanad",
+        "budget_amount": 40000,
+        "budget_direction": "at_least"
+      }
+    },
+    {
+      "id": "B-08",
+      "goal": "Spiti for 7 days, we can't go over 50k",
+      "expect": {
+        "destination": "Spiti",
+        "budget_amount": 50000,
+        "budget_direction": "at_most"
+      }
+    },
+    {
+      "id": "B-09",
+      "goal": "Ranthambore 2 days, somewhere near 20k, tiger safari",
+      "expect": {
+        "destination": "Ranthambore",
+        "budget_amount": 20000,
+        "budget_direction": "about"
+      }
+    },
+    {
+      "id": "B-10",
+      "goal": "Varkala 4 days, up to 2500 a day per person",
+      "expect": {
+        "destination": "Varkala",
+        "budget_amount": 2500,
+        "budget_is_per_day": true,
+        "budget_is_per_person": true,
+        "budget_direction": "at_most"
+      }
+    }
+  ]
+}

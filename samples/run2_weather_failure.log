@@ -1,0 +1,111 @@
+──────────────────────────────────────────────── yatra-agent ─────────────────────────────────────────────────
+Goal: 2 days in Jaipur this weekend, must visit Amber Fort, love forts and bazaars, around 12000
+Injected failure: weather will time out on every attempt
+╭─ 1 · Read the goal  (LLM) ─────────────────────────────────────────────────────────────────────────────────╮
+│ Destination     Jaipur                     Days        2           Travellers  not given                   │
+│ Budget words    around 12000 (not_stated)  Must visit  Amber Fort                                          │
+│ Kinds of place  forts, bazaars             Purposes    -                                                   │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 2 · Complete the request  (code) ─────────────────────────────────────────────────────────────────────────╮
+│ Sat 17 Oct → Sun 18 Oct  ·  2 days, 1 nights  ·  1 traveller(s)  ·  budget Rs 12,000 (max Rs 12,000)       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 3 · Plan before acting  (LLM, checked by code) ───────────────────────────────────────────────────────────╮
+│ 2 days in Jaipur around the Amber Fort, forts, and bazaars.                                                │
+│ #    Tool                  Looks up             For          Why                                           │
+│ ────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│ 1    resolve_destination                                     Find Jaipur on the map; every later step      │
+│                                                              searches around it.                           │
+│ 2    weather                                                 The trip starts in 4 days, so the forecast    │
+│                                                              can guide outdoor plans.                      │
+│ 3    locate_place          Amber Fort           must visit   You must see the Amber Fort.                  │
+│ 4    find_places           fort                 place type   You want to see forts; 'fort' is what such a  │
+│                                                              place is called.                              │
+│ 5    find_places           bazaar               place type   You want to see bazaars; 'bazaar' is what     │
+│                                                              such a place is called.                       │
+│ 6    find_places           tourist attraction   popular      Fill the free time with Jaipur's best-known   │
+│                                                              sights.                                       │
+│ 7    build_itinerary                                         Put the places into days, most important      │
+│                                                              first.                                        │
+│ 8    find_stays_and_food                                     Find a stay near each next day's sights and   │
+│                                                              places to eat near the day's route.           │
+│ 9    estimate_costs                                          Price the stay, food, travel and tickets.     │
+│ 10   check_budget                                            Compare the cost with your budget.            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 4 · Execute the plan  (tools) ────────────────────────────────────────────────────────────────────────────╮
+│ #   Tool                         Result                                                                    │
+│ ────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│ 1   resolve_destination   ok     city -> base city Jaipur (26.920, 75.788)                                 │
+│ 2   weather               miss   forecast unavailable; continuing without weather                          │
+│ 3   locate_place          ok     Amber Fort found, 9.7 km from Jaipur                                      │
+│ 4   find_places           ok     'fort': 6 found, 5 new (Jaigarh Fort, Nahargarh Fort, Shila Devi...)      │
+│ 5   find_places           ok     'bazaar': 1 found, 1 new (Badi Chaupar)                                   │
+│ 6   find_places           ok     'tourist attraction': 6 found, 4 new (Hawa Mahal, Jal Mahal, Jantar       │
+│                                  Mantar, Jaipur...)                                                        │
+│ handled: weather timeout (injected failure (--inject-failure): simulated timeout (after 3 attempt(s))) →   │
+│ continued without a forecast                                                                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 5 · Build the days  (code: priority order, nearby places together, rainy days indoors) ───────────────────╮
+│ Day 1: Amber Fort → Jaigarh Fort → Shila Devi                                                              │
+│ Day 2: Badi Chaupar → Nahargarh Fort → Kanak Vrindavan                                                     │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 6 · Budget check  (code) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                            │
+│  Hotel (mid, 1 room)   Rs 3,000                                                                            │
+│  Food (mid)            Rs 2,400                                                                            │
+│  Local travel (cab)    Rs 3,000                                                                            │
+│  Entry tickets           Rs 600                                                                            │
+│  Total                 Rs 9,000                                                                            │
+│                                                                                                            │
+│ WITHIN  (limit Rs 12,000)                                                                                  │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+─────────────────────────────────────────── Your trip, day by day ────────────────────────────────────────────
+╭─ Day 1 · Sat 17 Oct ───────────────────────────────────────────────────────────────────────────────────────╮
+│ 07:35  Arrive in Jaipur                                                                                    │
+│ 07:35  → by road 6.7 km                                                                            ~35 min │
+│ 08:10  Drop the bags at Rajputana Haveli (check-in is later)                                        15 min │
+│ 08:25  → by road 7.1 km                                                                            ~35 min │
+│ 09:00  Breakfast at Cafe Coffee Day (cafe, 0.1 km)                                                  45 min │
+│ 09:45  → walk 0.2 km                                                                                ~5 min │
+│ 09:50  Amber Fort (must visit)                                                                  2 h 30 min │
+│ 12:20  → walk 0.5 km                                                                               ~10 min │
+│ 12:30  Lunch at Garh rooftop cafe and restaurant (restaurant, 0.4 km)                                  1 h │
+│ 13:30  Rest (a break in the middle of the day)                                                         1 h │
+│ 14:30  → walk 0.5 km                                                                               ~10 min │
+│ 14:40  Jaigarh Fort (for: forts)                                                                2 h 30 min │
+│ 17:10  → walk 0.1 km                                                                                ~5 min │
+│ 17:15  Shila Devi (for: forts)                                                                         1 h │
+│ 18:15  Free time (rest, or look around Shila Devi)                                               1 h 5 min │
+│ 19:20  → walk 0.5 km                                                                               ~10 min │
+│ 19:30  Dinner at Dayaram Ji Jagadamba Restaurant (restaurant, 0.4 km)                                  1 h │
+│ 20:30  → by road 7.6 km                                                                            ~35 min │
+│ 21:05  Check in at Rajputana Haveli (hotel, near tomorrow's places)                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Day 2 · Sun 18 Oct ───────────────────────────────────────────────────────────────────────────────────────╮
+│ 08:40  Check out of Rajputana Haveli (leave the bags at the desk)                                          │
+│ 08:40  → by road 2.3 km                                                                            ~20 min │
+│ 09:00  Breakfast at The Tattoo Cafe (cafe, <0.1 km)                                                 45 min │
+│ 09:45  → walk <0.1 km                                                                               ~5 min │
+│ 09:50  Badi Chaupar (for: bazaars)                                                                     1 h │
+│ 10:50  → by road 2.4 km                                                                            ~20 min │
+│ 11:10  Nahargarh Fort (for: forts)                                                              2 h 30 min │
+│ 13:40  → walk 0.1 km                                                                                ~5 min │
+│ 13:45  Lunch at Once Upon at Gath (restaurant, <0.1 km)                                                1 h │
+│ 14:45  Rest (a break in the middle of the day)                                                         1 h │
+│ 15:45  → by road 5.5 km                                                                            ~30 min │
+│ 16:15  Kanak Vrindavan (for: forts)                                                                    1 h │
+│ 17:15  Free time (rest, or look around Kanak Vrindavan)                                         1 h 55 min │
+│ 19:10  → by road 2.1 km                                                                            ~20 min │
+│ 19:30  Dinner at RESTAURANT , JAIPUR (restaurant, 1.6 km)                                              1 h │
+│ 20:30  → by road 2.0 km                                                                            ~20 min │
+│ 20:50  Collect the bags from Rajputana Haveli                                                       15 min │
+│ 21:05  End of the trip                                                                                     │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 8 · Report  ·  status: done ──────────────────────────────────────────────────────────────────────────────╮
+│ • Group size not given, so 1 traveller was assumed.                                                        │
+│ • Budget of Rs 12,000 was treated as a maximum, because the words 'around 12000' did not say whether it    │
+│ can be exceeded.                                                                                           │
+│ • The weather forecast could not be fetched, so the plan has no weather adjustments. Please check the      │
+│ forecast before you go.                                                                                    │
+│ • Because you chose Amber Fort, other historic sights were preferred among the popular ones.               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Saved samples\run2_weather_failure.md, samples\run2_weather_failure.json and samples\run2_weather_failure.log

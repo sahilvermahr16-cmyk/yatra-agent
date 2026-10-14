@@ -1,0 +1,18 @@
+[project]
+name = "yatra-agent"
+version = "1.0.0"
+description = "Agentic budget trip planner for India (LangGraph): plans before acting, uses live free APIs, recovers from failures."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+# pyflakes, pycodestyle, bugbear, pyupgrade, import order
+select = ["F", "E", "W", "B", "UP", "I"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

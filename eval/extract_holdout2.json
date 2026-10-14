@@ -1,0 +1,68 @@
+{
+  "today": "2026-10-12",
+  "note": "Fresh holdout round 2, written 2026-10-13 after the date fix. Cities and phrasings differ from the dev set, holdout 1 and the prompt examples. Run once, on the final prompt.",
+  "cases": [
+    {
+      "id": "H2-01",
+      "goal": "Dharamshala the day after tomorrow for 3 days, Tibetan cafes and paragliding, around 20k for the two of us",
+      "expect": {"destination": "Dharamshala", "days": 3, "travellers": 2, "budget_amount": 20000, "budget_is_per_person": false, "budget_is_per_day": false, "budget_direction": "about", "place_types": ["Tibetan cafes", "paragliding"], "interests__includes": ["food", "adventure"], "end": null},
+      "expect_final": {"start_date": "2026-10-14", "end_date": "2026-10-16"}
+    },
+    {
+      "id": "H2-02",
+      "goal": "Khajuraho next Saturday, just one day, I want to see the carved temple ruins",
+      "edge": "'next <weekday>' is read as the weekday in next week",
+      "expect": {"destination": "Khajuraho", "days": 1, "end": null, "interests__includes": ["history"]},
+      "expect_final": {"start_date": "2026-10-24", "end_date": "2026-10-24"}
+    },
+    {
+      "id": "H2-03",
+      "goal": "Gokarna from Dec 28 to Jan 2, beach shacks and surfing, budget 30000 tops",
+      "edge": "the trip crosses into the next year",
+      "expect": {"destination": "Gokarna", "days": null, "budget_amount": 30000, "budget_is_per_person": false, "budget_direction": "at_most", "place_types": ["beach shacks", "surfing"], "interests__includes": ["adventure"]},
+      "expect_final": {"start_date": "2026-12-28", "end_date": "2027-01-02", "days": 6}
+    },
+    {
+      "id": "H2-04",
+      "goal": "Family trip to Mahabaleshwar for 3 days with my parents and my sister, strawberry farms and viewpoints",
+      "expect": {"destination": "Mahabaleshwar", "days": 3, "travellers": 4, "budget_amount": null, "start": null, "end": null, "place_types": ["strawberry farms", "viewpoints"], "interests__includes": ["nature"], "must_visit": []}
+    },
+    {
+      "id": "H2-05",
+      "goal": "Ujjain this Sunday, Mahakaleshwar temple darshan, Rs 1500 per person, 3 people",
+      "expect": {"destination": "Ujjain", "travellers": 3, "budget_amount": 1500, "budget_is_per_person": true, "budget_is_per_day": false, "budget_direction": "not_stated", "must_visit": ["Mahakaleshwar temple"], "end": null},
+      "expect_final": {"start_date": "2026-10-18"}
+    },
+    {
+      "id": "H2-06",
+      "goal": "Jaisalmer for 5 days, desert safari and camping under the stars, budget around 8k a day",
+      "expect": {"destination": "Jaisalmer", "days": 5, "budget_amount": 8000, "budget_is_per_day": true, "budget_is_per_person": false, "budget_direction": "about", "start": null, "place_types": ["desert safari", "camping under the stars"], "interests__includes": ["adventure"]}
+    },
+    {
+      "id": "H2-07",
+      "goal": "Tawang from the 3rd of November till the 7th, my friends and I, can't spend more than 15000 each",
+      "edge": "the end date gives only a day; the month comes from the start date",
+      "expect": {"destination": "Tawang", "travellers": null, "budget_amount": 15000, "budget_is_per_person": true, "budget_direction": "at_most"},
+      "expect_final": {"start_date": "2026-11-03", "end_date": "2026-11-07", "days": 5}
+    },
+    {
+      "id": "H2-08",
+      "goal": "Help me plan a getaway with really good food under 12000",
+      "edge": "no destination",
+      "expect": {"destination": null, "budget_amount": 12000, "budget_direction": "at_most", "interests__includes": ["food"]},
+      "expect_status": "needs_city"
+    },
+    {
+      "id": "H2-09",
+      "goal": "Bodh Gaya tomorrow, going solo, a meditation retreat and the Mahabodhi Temple",
+      "expect": {"destination": "Bodh Gaya", "travellers": 1, "must_visit": ["Mahabodhi Temple"], "place_types": ["meditation retreat"], "interests__includes": ["religious"], "end": null},
+      "expect_final": {"start_date": "2026-10-13"}
+    },
+    {
+      "id": "H2-10",
+      "goal": "Kaziranga starting this weekend for 4 days, jeep safari and birdwatching, luxury lodge",
+      "expect": {"destination": "Kaziranga", "days": 4, "budget_style": "luxury", "budget_amount": null, "end": null, "place_types": ["jeep safari", "birdwatching"], "interests__includes": ["nature"]},
+      "expect_final": {"start_date": "2026-10-17", "end_date": "2026-10-20"}
+    }
+  ]
+}

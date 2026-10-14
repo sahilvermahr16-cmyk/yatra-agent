@@ -1,0 +1,124 @@
+──────────────────────────────────────────────── yatra-agent ─────────────────────────────────────────────────
+Goal: 3 days in Jodhpur next weekend, must see Mehrangarh Fort, love stepwells and street food, under 20k for 
+two
+╭─ 1 · Read the goal  (LLM) ─────────────────────────────────────────────────────────────────────────────────╮
+│ Destination     Jodhpur                      Days        3                Travellers  2                    │
+│ Budget words    under 20k for two (at_most)  Must visit  Mehrangarh Fort                                   │
+│ Kinds of place  stepwells, street food       Purposes    -                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 2 · Complete the request  (code) ─────────────────────────────────────────────────────────────────────────╮
+│ Sat 24 Oct → Mon 26 Oct  ·  3 days, 2 nights  ·  2 traveller(s)  ·  budget Rs 20,000 (max Rs 20,000)       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 3 · Plan before acting  (LLM, checked by code) ───────────────────────────────────────────────────────────╮
+│ 3 days in Jodhpur around the Mehrangarh Fort, stepwells, and street food.                                  │
+│ #    Tool                  Looks up             For          Why                                           │
+│ ────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│ 1    resolve_destination                                     Find Jodhpur on the map; every later step     │
+│                                                              searches around it.                           │
+│ 2    weather                                                 The trip starts in 10 days, so the forecast   │
+│                                                              can guide outdoor plans.                      │
+│ 3    locate_place          Mehrangarh Fort      must visit   You must see the Mehrangarh Fort.             │
+│ 4    find_places           stepwell             place type   You want to see stepwells; 'stepwell' is what │
+│                                                              such a place is called.                       │
+│ 5    find_places           street food          place type   You want to experience street food; 'street   │
+│                                                              food' is what such a place is called.         │
+│ 6    find_places           tourist attraction   popular      Fill the free time with Jodhpur's best-known  │
+│                                                              sights.                                       │
+│ 7    build_itinerary                                         Put the places into days, most important      │
+│                                                              first.                                        │
+│ 8    find_stays_and_food                                     Find a stay near each next day's sights and   │
+│                                                              places to eat near the day's route.           │
+│ 9    estimate_costs                                          Price the stay, food, travel and tickets.     │
+│ 10   check_budget                                            Compare the cost with your budget.            │
+│ self-correction: llm_self_check_retry ['- there are 2 kind of place wish(es) but 1 find_places step(s) for │
+│ them', '- there are 0 purpose that needs its own search wish(es) but 1 find_places step(s) for them']      │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 4 · Execute the plan  (tools) ────────────────────────────────────────────────────────────────────────────╮
+│ #   Tool                         Result                                                                    │
+│ ────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│ 1   resolve_destination   ok     city -> base city Jodhpur (26.268, 73.006)                                │
+│ 2   weather               ok     3 day(s) of forecast, 0 likely rainy                                      │
+│ 3   locate_place          ok     Mehrangarh found, 3.5 km from Jodhpur                                     │
+│ 4   find_places           ok     'stepwell': 1 found, 1 new (Toorji Ka Jhalra)                             │
+│ 5   find_places           miss   'street food': 0 found, 0 new                                             │
+│ 6   find_places           ok     'tourist attraction': 5 found, 4 new (Jaswant Thada, Kaylana Lake, Ghanta │
+│                                  Ghar (Jodhpur)...)                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 5 · Build the days  (code: priority order, nearby places together, rainy days indoors) ───────────────────╮
+│ Day 1: Mehrangarh → Toorji Ka Jhalra                                                                       │
+│ Day 2: Jaswant Thada → Rao Jodha Desert Rock Park                                                          │
+│ Day 3: Kaylana Lake → Ghanta Ghar (Jodhpur)                                                                │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 6 · Budget check  (code) ─────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                            │
+│  Hotel (mid, 1 room)    Rs 6,000                                                                           │
+│  Food (mid)             Rs 7,200                                                                           │
+│  Local travel (cab)     Rs 4,500                                                                           │
+│  Entry tickets          Rs 1,200                                                                           │
+│  Total                 Rs 18,900                                                                           │
+│                                                                                                            │
+│ WITHIN  (limit Rs 20,000)                                                                                  │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+─────────────────────────────────────────── Your trip, day by day ────────────────────────────────────────────
+╭─ Day 1 · Sat 24 Oct · Clear sky, 24–37°C, rain 0% ─────────────────────────────────────────────────────────╮
+│ 08:15  Arrive in Jodhpur                                                                                   │
+│ 08:15  → by road 4.7 km                                                                            ~25 min │
+│ 08:40  Drop the bags at MH Guest House (check-in is later)                                          15 min │
+│ 08:55  → walk 0.2 km                                                                                ~5 min │
+│ 09:00  Breakfast at Café Mehran (cafe, 0.1 km)                                                      45 min │
+│ 09:45  → walk 0.1 km                                                                                ~5 min │
+│ 09:50  Mehrangarh (must visit)                                                                  2 h 30 min │
+│ 12:20  → walk 0.6 km                                                                               ~10 min │
+│ 12:30  Toorji Ka Jhalra (for: stepwells)                                                            45 min │
+│ 13:15  → walk <0.1 km                                                                               ~5 min │
+│ 13:20  Lunch at Open House (restaurant, <0.1 km)                                                       1 h │
+│ 14:20  Rest (a break in the middle of the day)                                                         1 h │
+│ 15:20  Free time (rest, or look around Toorji Ka Jhalra)                                         4 h 5 min │
+│ 19:25  → walk 0.2 km                                                                                ~5 min │
+│ 19:30  Street food at King of Omelettes (fast food, 0.2 km)                                            1 h │
+│ 20:30  → walk 0.5 km                                                                               ~10 min │
+│ 20:40  Check in at MH Guest House (hotel, near tomorrow's places)                                          │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Day 2 · Sun 25 Oct · Clear sky, 24–37°C, rain 3% ─────────────────────────────────────────────────────────╮
+│ 08:55  Leave MH Guest House                                                                                │
+│ 08:55  → walk 0.3 km                                                                                ~5 min │
+│ 09:00  Breakfast at Stepwell Café (cafe, 0.8 km)                                                    45 min │
+│ 09:45  → by road 1.0 km                                                                            ~15 min │
+│ 10:00  Jaswant Thada (popular sight)                                                                45 min │
+│ 10:45  → by road 1.1 km                                                                            ~15 min │
+│ 11:00  Rao Jodha Desert Rock Park (popular sight)                                                      1 h │
+│ 12:00  → walk 0.9 km                                                                               ~15 min │
+│ 12:15  Lunch at Anna Café and Restaurant (restaurant, 0.7 km)                                          1 h │
+│ 13:15  Rest (a break in the middle of the day)                                                         1 h │
+│ 14:15  Free time (rest, or look around Rao Jodha Desert Rock Park)                               5 h 5 min │
+│ 19:20  → walk 0.6 km                                                                               ~10 min │
+│ 19:30  Street food at Street Food Café (fast food, 0.8 km)                                             1 h │
+│ 20:30  → walk <0.1 km                                                                               ~5 min │
+│ 20:35  Night at MH Guest House (hotel, near tomorrow's places)                                             │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Day 3 · Mon 26 Oct · Mainly clear, 24–37°C, rain 10% ─────────────────────────────────────────────────────╮
+│ 08:25  Check out of MH Guest House (leave the bags at the desk)                                            │
+│ 08:25  → by road 7.3 km                                                                            ~35 min │
+│ 09:00  Breakfast near your stay                                                                     45 min │
+│ 09:45  → to Kaylana Lake                                                                           ~10 min │
+│ 09:55  Kaylana Lake (popular sight)                                                                    1 h │
+│ 10:55  → by road 7.6 km                                                                            ~35 min │
+│ 11:30  Ghanta Ghar (popular sight)                                                                  30 min │
+│ 12:00  → walk 0.1 km                                                                                ~5 min │
+│ 12:05  Lunch at Om Juice Corner (restaurant, 0.1 km)                                                   1 h │
+│ 13:05  Rest (a break in the middle of the day)                                                         1 h │
+│ 14:05  Free time (rest, or look around Ghanta Ghar)                                             5 h 20 min │
+│ 19:25  → walk <0.1 km                                                                               ~5 min │
+│ 19:30  Street food at Mahadev Khana Khajana (fast food, 0.1 km)                                        1 h │
+│ 20:30  → walk 0.5 km                                                                               ~10 min │
+│ 20:40  Collect the bags from MH Guest House                                                         15 min │
+│ 20:55  End of the trip                                                                                     │
+│ note: No cafe or restaurant was found within 1.5 km of Kaylana Lake on OpenStreetMap; have breakfast near  │
+│ your stay before leaving.                                                                                  │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ 8 · Report  ·  status: done ──────────────────────────────────────────────────────────────────────────────╮
+│ • Because you chose Mehrangarh Fort, other historic sights were preferred among the popular ones.          │
+│ • Wikipedia had no places for 'street food', so food spots from OpenStreetMap were added to the days       │
+│ instead.                                                                                                   │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Saved samples\run1_normal.md, samples\run1_normal.json and samples\run1_normal.log

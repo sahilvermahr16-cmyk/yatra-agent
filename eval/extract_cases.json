@@ -1,0 +1,261 @@
+{
+  "today": "2026-10-12",
+  "note": "Locked dev cases for the extract step. Only listed fields are checked. interests are compared as sets; place_types ignore case and a trailing 's'; '<field>__includes' only requires those values to be present. | 2026-10-13: dates are now DateRefs (LLM) resolved by code; raw start_date/end_date expectations were moved to expect_final with the same values, and 'not stated' became start/end = null.",
+  "cases": [
+    {
+      "id": "EX-01",
+      "goal": "3 day Jaipur trip under 15k, love forts and street food",
+      "expect": {
+        "destination": "Jaipur",
+        "days": 3,
+        "budget_amount": 15000,
+        "budget_is_per_person": false,
+        "budget_is_per_day": false,
+        "interests": [
+          "history",
+          "food"
+        ],
+        "place_types": [
+          "forts",
+          "street food"
+        ],
+        "budget_direction": "at_most",
+        "start": null,
+        "end": null
+      }
+    },
+    {
+      "id": "EX-02",
+      "goal": "Plan a 2-day trip to Udaipur next weekend for 2 people, budget 20000",
+      "expect": {
+        "destination": "Udaipur",
+        "travellers": 2,
+        "budget_amount": 20000,
+        "budget_is_per_person": false,
+        "place_types": [],
+        "budget_direction": "not_stated"
+      },
+      "expect_final": {
+        "start_date": "2026-10-24",
+        "end_date": "2026-10-25"
+      }
+    },
+    {
+      "id": "EX-03",
+      "goal": "Solo backpacking trip to Rishikesh for 4 days, rafting and temples",
+      "expect": {
+        "destination": "Rishikesh",
+        "days": 4,
+        "travellers": 1,
+        "budget_style": "budget",
+        "interests": [
+          "adventure",
+          "religious"
+        ],
+        "budget_amount": null,
+        "place_types": [
+          "rafting",
+          "temples"
+        ]
+      }
+    },
+    {
+      "id": "EX-04",
+      "goal": "Luxury 3 day holiday in Kerala for a family of 4, budget 1.5 lakh",
+      "expect": {
+        "destination": "Kerala",
+        "days": 3,
+        "travellers": 4,
+        "budget_amount": 150000,
+        "budget_style": "luxury",
+        "budget_is_per_person": false,
+        "place_types": [],
+        "budget_direction": "not_stated"
+      }
+    },
+    {
+      "id": "EX-05",
+      "goal": "Weekend in Pondicherry, beaches and cafes, 5k per person",
+      "expect": {
+        "destination": "Pondicherry",
+        "budget_amount": 5000,
+        "budget_is_per_person": true,
+        "budget_is_per_day": false,
+        "interests": [
+          "nature",
+          "food"
+        ],
+        "place_types": [
+          "beaches",
+          "cafes"
+        ],
+        "budget_direction": "not_stated"
+      },
+      "expect_final": {
+        "start_date": "2026-10-17",
+        "end_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "EX-06",
+      "goal": "Varanasi trip this Friday for 3 days, ghats and street food",
+      "expect": {
+        "destination": "Varanasi",
+        "days": 3,
+        "place_types": [
+          "ghats",
+          "street food"
+        ],
+        "interests__includes": [
+          "food"
+        ]
+      },
+      "expect_final": {
+        "start_date": "2026-10-16",
+        "end_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "EX-07",
+      "goal": "I want to see Hawa Mahal and City Palace in Jaipur",
+      "expect": {
+        "destination": "Jaipur",
+        "must_visit": [
+          "Hawa Mahal",
+          "City Palace"
+        ],
+        "interests": [],
+        "days": null,
+        "budget_amount": null,
+        "place_types": []
+      }
+    },
+    {
+      "id": "EX-08",
+      "goal": "Goa trip from Mumbai, 3 days, under 25k",
+      "expect": {
+        "destination": "Goa",
+        "days": 3,
+        "budget_amount": 25000,
+        "place_types": [],
+        "budget_direction": "at_most"
+      }
+    },
+    {
+      "id": "EX-09",
+      "goal": "Trip to Shimla from Oct 20-24 with friends",
+      "expect": {
+        "destination": "Shimla",
+        "days": null,
+        "travellers": null,
+        "place_types": []
+      },
+      "expect_final": {
+        "start_date": "2026-10-20",
+        "end_date": "2026-10-24"
+      }
+    },
+    {
+      "id": "EX-10",
+      "goal": "5 day trip to Ladakh, max 60000 for two, trekking and monasteries",
+      "expect": {
+        "destination": "Ladakh",
+        "days": 5,
+        "travellers": 2,
+        "budget_amount": 60000,
+        "budget_is_per_person": false,
+        "interests": [
+          "adventure",
+          "religious"
+        ],
+        "place_types": [
+          "trekking",
+          "monasteries"
+        ],
+        "budget_direction": "at_most"
+      }
+    },
+    {
+      "id": "EX-11",
+      "goal": "Plan something fun for 3 days under 10000",
+      "expect": {
+        "destination": null,
+        "days": 3,
+        "budget_amount": 10000,
+        "budget_direction": "at_most"
+      },
+      "expect_status": "needs_city"
+    },
+    {
+      "id": "EX-12",
+      "goal": "Mid-range trip to Darjeeling for 4 days, 3000 per day",
+      "expect": {
+        "destination": "Darjeeling",
+        "days": 4,
+        "budget_amount": 3000,
+        "budget_is_per_day": true,
+        "budget_is_per_person": false,
+        "budget_style": "mid",
+        "place_types": [],
+        "budget_direction": "not_stated"
+      }
+    },
+    {
+      "id": "EX-13",
+      "goal": "Amritsar on 25th October for 2 days, must visit the Golden Temple",
+      "expect": {
+        "destination": "Amritsar",
+        "days": 2,
+        "must_visit": [
+          "Golden Temple"
+        ],
+        "interests": [],
+        "place_types": [],
+        "end": null
+      },
+      "expect_final": {
+        "start_date": "2026-10-25"
+      }
+    },
+    {
+      "id": "EX-14",
+      "goal": "Hyderabad for 3 days, biryani and Charminar, Rs 4000 per head per day, 3 people",
+      "expect": {
+        "destination": "Hyderabad",
+        "days": 3,
+        "travellers": 3,
+        "budget_amount": 4000,
+        "budget_is_per_person": true,
+        "budget_is_per_day": true,
+        "interests": [
+          "food"
+        ],
+        "must_visit": [
+          "Charminar"
+        ],
+        "place_types": [
+          "biryani"
+        ],
+        "budget_direction": "not_stated"
+      }
+    },
+    {
+      "id": "EX-15",
+      "goal": "Me and my friend want a cheap 2 day trip to Rajasthan, forts and markets",
+      "expect": {
+        "destination": "Rajasthan",
+        "days": 2,
+        "travellers": 2,
+        "budget_style": "budget",
+        "interests": [
+          "history",
+          "shopping"
+        ],
+        "place_types": [
+          "forts",
+          "markets"
+        ]
+      }
+    }
+  ]
+}

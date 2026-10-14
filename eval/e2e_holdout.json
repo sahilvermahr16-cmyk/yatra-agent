@@ -1,0 +1,114 @@
+{
+  "note": "End-to-end HOLDOUT, written 2026-10-13 after the dev fix round (E-set 14/14). New cities and goals, no overlap with the dev set. Run once; failures go to the limitations, they are not fixed against this set.",
+  "cases": [
+    {
+      "id": "H-01",
+      "about": "normal city trip",
+      "goal": "3 days in Hyderabad, love history and biryani",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Hyderabad"
+        ]
+      }
+    },
+    {
+      "id": "H-02",
+      "about": "a state instead of a city",
+      "goal": "2 days in Kerala, backwaters and beaches",
+      "expect": {
+        "status": "done",
+        "destination_type": "state",
+        "region": "Kerala"
+      }
+    },
+    {
+      "id": "H-03",
+      "about": "must-visit place far from the city",
+      "goal": "2 days in Pune, must see the Golden Temple",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Pune"
+        ],
+        "notes_include": [
+          "is not in this plan"
+        ]
+      }
+    },
+    {
+      "id": "H-04",
+      "about": "tight budget: the replanner should bring it down",
+      "goal": "3 days in Shimla for 3 people, max 12000 total",
+      "expect": {
+        "status": "done",
+        "replanned": true
+      }
+    },
+    {
+      "id": "H-05",
+      "about": "no budget given: a guide only, no replanning",
+      "goal": "a weekend in Rishikesh",
+      "expect": {
+        "status": "done",
+        "no_ceiling": true,
+        "replanned": false
+      }
+    },
+    {
+      "id": "H-06",
+      "about": "ambiguous instruction: no destination",
+      "goal": "I want a relaxing vacation, you choose",
+      "expect": {
+        "status": "needs_city"
+      }
+    },
+    {
+      "id": "H-07",
+      "about": "destination outside India",
+      "goal": "4 days in Bangkok, street food",
+      "expect": {
+        "status": "needs_city"
+      }
+    },
+    {
+      "id": "H-08",
+      "about": "Hinglish goal",
+      "goal": "kolkata 3 din ghumna h 15k tak, purani imaratein pasand h",
+      "expect": {
+        "status": "done",
+        "base_city": [
+          "Kolkata"
+        ],
+        "ceiling": 15000
+      }
+    },
+    {
+      "id": "H-09",
+      "about": "induced failure: weather API times out",
+      "goal": "2 days in Bhopal, must see Upper Lake",
+      "inject": "weather_timeout",
+      "expect": {
+        "status": "done",
+        "errors_where": [
+          "weather"
+        ],
+        "notes_include": [
+          "forecast could not be fetched"
+        ]
+      }
+    },
+    {
+      "id": "H-10",
+      "about": "induced failure: Wikipedia place search times out",
+      "goal": "3 days in Madurai, temples",
+      "inject": "places_timeout",
+      "expect": {
+        "status": "done",
+        "errors_where": [
+          "places"
+        ]
+      }
+    }
+  ]
+}

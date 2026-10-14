@@ -1,0 +1,1084 @@
+{
+  "goal": "2 days in Jaipur this weekend, must visit Amber Fort, love forts and bazaars, around 12000",
+  "status": "done",
+  "created_at": "2026-10-13T20:32:03.194011",
+  "request": {
+    "destination": "Jaipur",
+    "start": {
+      "phrase": "this weekend",
+      "kind": "weekend",
+      "day": null,
+      "month": null,
+      "year": null,
+      "offset_days": null,
+      "weekday": null,
+      "which": "this"
+    },
+    "end": null,
+    "days": 2,
+    "travellers": 1,
+    "budget_phrase": "around 12000",
+    "budget_amount": 12000.0,
+    "budget_amount_max": null,
+    "budget_is_per_person": false,
+    "budget_is_per_day": false,
+    "budget_direction": "not_stated",
+    "budget_style": null,
+    "must_visit": [
+      "Amber Fort"
+    ],
+    "place_types": [
+      {
+        "words": "forts",
+        "interests": [
+          "history"
+        ]
+      },
+      {
+        "words": "bazaars",
+        "interests": [
+          "shopping"
+        ]
+      }
+    ],
+    "interests": [
+      "history",
+      "shopping"
+    ],
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-18",
+    "destination_type": null,
+    "base_city": null,
+    "nights": 1,
+    "total_budget": 12000.0,
+    "budget_ceiling": 12000.0,
+    "budget_floor": null
+  },
+  "destination": {
+    "query": "Jaipur",
+    "destination_type": "city",
+    "wikivoyage_title": "Jaipur",
+    "candidates": [],
+    "base_city": "Jaipur",
+    "choice_reason": "Jaipur was named by the user.",
+    "location": {
+      "name": "Jaipur",
+      "lat": 26.91962,
+      "lon": 75.78781,
+      "region": "Rajasthan",
+      "feature_code": "PPLA",
+      "population": 3046163,
+      "source": "Open-Meteo geocoding"
+    },
+    "used_fallback": false
+  },
+  "plan": {
+    "summary": "2 days in Jaipur around the Amber Fort, forts, and bazaars.",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "resolve_destination",
+        "query": null,
+        "serves": null,
+        "reason": "Find Jaipur on the map; every later step searches around it."
+      },
+      {
+        "step": 2,
+        "tool": "weather",
+        "query": null,
+        "serves": null,
+        "reason": "The trip starts in 4 days, so the forecast can guide outdoor plans."
+      },
+      {
+        "step": 3,
+        "tool": "locate_place",
+        "query": "Amber Fort",
+        "serves": "must_visit",
+        "reason": "You must see the Amber Fort."
+      },
+      {
+        "step": 4,
+        "tool": "find_places",
+        "query": "fort",
+        "serves": "place_type",
+        "reason": "You want to see forts; 'fort' is what such a place is called."
+      },
+      {
+        "step": 5,
+        "tool": "find_places",
+        "query": "bazaar",
+        "serves": "place_type",
+        "reason": "You want to see bazaars; 'bazaar' is what such a place is called."
+      },
+      {
+        "step": 6,
+        "tool": "find_places",
+        "query": "tourist attraction",
+        "serves": "popular",
+        "reason": "Fill the free time with Jaipur's best-known sights."
+      },
+      {
+        "step": 7,
+        "tool": "build_itinerary",
+        "query": null,
+        "serves": null,
+        "reason": "Put the places into days, most important first."
+      },
+      {
+        "step": 8,
+        "tool": "find_stays_and_food",
+        "query": null,
+        "serves": null,
+        "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+      },
+      {
+        "step": 9,
+        "tool": "estimate_costs",
+        "query": null,
+        "serves": null,
+        "reason": "Price the stay, food, travel and tickets."
+      },
+      {
+        "step": 10,
+        "tool": "check_budget",
+        "query": null,
+        "serves": null,
+        "reason": "Compare the cost with your budget."
+      }
+    ]
+  },
+  "step_results": [
+    {
+      "step": 1,
+      "tool": "resolve_destination",
+      "ok": true,
+      "summary": "city -> base city Jaipur (26.920, 75.788)"
+    },
+    {
+      "step": 2,
+      "tool": "weather",
+      "ok": false,
+      "summary": "forecast unavailable; continuing without weather"
+    },
+    {
+      "step": 3,
+      "tool": "locate_place",
+      "ok": true,
+      "summary": "Amber Fort found, 9.7 km from Jaipur"
+    },
+    {
+      "step": 4,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'fort': 6 found, 5 new (Jaigarh Fort, Nahargarh Fort, Shila Devi...)"
+    },
+    {
+      "step": 5,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'bazaar': 1 found, 1 new (Badi Chaupar)"
+    },
+    {
+      "step": 6,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'tourist attraction': 6 found, 4 new (Hawa Mahal, Jal Mahal, Jantar Mantar, Jaipur...)"
+    }
+  ],
+  "weather": null,
+  "itinerary": {
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-10-17",
+        "weather": null,
+        "places": [
+          {
+            "name": "Amber Fort",
+            "lat": 26.9859,
+            "lon": 75.8507,
+            "distance_km": 9.7,
+            "description": "World Heritage Site in India",
+            "serves": "must_visit",
+            "wish": "Amber Fort",
+            "category": "popular",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Amber_Fort",
+            "pageviews": 30134,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Jaigarh Fort",
+            "lat": 26.9859,
+            "lon": 75.8507,
+            "distance_km": 9.7,
+            "description": "Historic military fortress in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "forts",
+            "category": "history",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Jaigarh_Fort",
+            "pageviews": 5558,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Shila Devi",
+            "lat": 26.98688,
+            "lon": 75.85047,
+            "distance_km": 9.7,
+            "description": "Hindu temple in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "forts",
+            "category": "history",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Shila_Devi",
+            "pageviews": 1149,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Amber Fort (must visit); Jaigarh Fort (you wanted forts); Shila Devi (you wanted forts). All within 0.1 km of each other.",
+        "stay": {
+          "name": "Rajputana Haveli",
+          "kind": "hotel",
+          "lat": 26.937669,
+          "lon": 75.8354746,
+          "distance_km": 0.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/4483166712"
+        },
+        "breakfast": {
+          "name": "Cafe Coffee Day",
+          "kind": "cafe",
+          "lat": 26.9854069,
+          "lon": 75.8495623,
+          "distance_km": 0.1,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/10744673403"
+        },
+        "lunch": {
+          "name": "Garh rooftop cafe and restaurant",
+          "kind": "restaurant",
+          "lat": 26.9859918,
+          "lon": 75.8543102,
+          "distance_km": 0.4,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/13201142301"
+        },
+        "food_stop": null,
+        "dinner": {
+          "name": "Dayaram Ji Jagadamba Restaurant",
+          "kind": "restaurant",
+          "lat": 26.9873107,
+          "lon": 75.8546162,
+          "distance_km": 0.4,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/14159517634"
+        },
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "07:35:00",
+            "end": "07:35:00",
+            "kind": "start",
+            "title": "Arrive in Jaipur",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "07:35:00",
+            "end": "08:10:00",
+            "kind": "travel",
+            "title": "→ by road 6.7 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:10:00",
+            "end": "08:25:00",
+            "kind": "bags",
+            "title": "Drop the bags at Rajputana Haveli",
+            "detail": "check-in is later",
+            "url": "https://www.openstreetmap.org/node/4483166712"
+          },
+          {
+            "start": "08:25:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ by road 7.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Cafe Coffee Day",
+            "detail": "cafe, 0.1 km",
+            "url": "https://www.openstreetmap.org/node/10744673403"
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:50:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:50:00",
+            "end": "12:20:00",
+            "kind": "visit",
+            "title": "Amber Fort",
+            "detail": "must visit",
+            "url": "https://en.wikipedia.org/wiki/Amber_Fort"
+          },
+          {
+            "start": "12:20:00",
+            "end": "12:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:30:00",
+            "end": "13:30:00",
+            "kind": "lunch",
+            "title": "Lunch at Garh rooftop cafe and restaurant",
+            "detail": "restaurant, 0.4 km",
+            "url": "https://www.openstreetmap.org/node/13201142301"
+          },
+          {
+            "start": "13:30:00",
+            "end": "14:30:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "14:30:00",
+            "end": "14:40:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "14:40:00",
+            "end": "17:10:00",
+            "kind": "visit",
+            "title": "Jaigarh Fort",
+            "detail": "for: forts",
+            "url": "https://en.wikipedia.org/wiki/Jaigarh_Fort"
+          },
+          {
+            "start": "17:10:00",
+            "end": "17:15:00",
+            "kind": "travel",
+            "title": "→ walk 0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "17:15:00",
+            "end": "18:15:00",
+            "kind": "visit",
+            "title": "Shila Devi",
+            "detail": "for: forts",
+            "url": "https://en.wikipedia.org/wiki/Shila_Devi"
+          },
+          {
+            "start": "18:15:00",
+            "end": "19:20:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Shila Devi",
+            "url": null
+          },
+          {
+            "start": "19:20:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner at Dayaram Ji Jagadamba Restaurant",
+            "detail": "restaurant, 0.4 km",
+            "url": "https://www.openstreetmap.org/node/14159517634"
+          },
+          {
+            "start": "20:30:00",
+            "end": "21:05:00",
+            "kind": "travel",
+            "title": "→ by road 7.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "21:05:00",
+            "end": "21:05:00",
+            "kind": "stay",
+            "title": "Check in at Rajputana Haveli",
+            "detail": "hotel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/node/4483166712"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "date": "2026-10-18",
+        "weather": null,
+        "places": [
+          {
+            "name": "Badi Chaupar",
+            "lat": 26.9239846,
+            "lon": 75.8271381,
+            "distance_km": 3.9,
+            "description": "Public square in Jaipur, India",
+            "serves": "place_type",
+            "wish": "bazaars",
+            "category": "shopping",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Badi_Chaupar",
+            "pageviews": 337,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Nahargarh Fort",
+            "lat": 26.937255,
+            "lon": 75.81549,
+            "distance_km": 3.4,
+            "description": "Historic military fortress in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "forts",
+            "category": "history",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Nahargarh_Fort",
+            "pageviews": 5523,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Kanak Vrindavan",
+            "lat": 26.96356389,
+            "lon": 75.84738889,
+            "distance_km": 7.7,
+            "description": "Park in India",
+            "serves": "place_type",
+            "wish": "forts",
+            "category": "history",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Kanak_Vrindavan",
+            "pageviews": 576,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Badi Chaupar (you wanted bazaars); Nahargarh Fort (you wanted forts); Kanak Vrindavan (you wanted forts). All within 4.8 km of each other.",
+        "stay": null,
+        "breakfast": {
+          "name": "The Tattoo Cafe",
+          "kind": "cafe",
+          "lat": 26.923806,
+          "lon": 75.827314,
+          "distance_km": 0.0,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5249299221"
+        },
+        "lunch": {
+          "name": "Once Upon at Gath",
+          "kind": "restaurant",
+          "lat": 26.9375434,
+          "lon": 75.8158196,
+          "distance_km": 0.0,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/13607613087"
+        },
+        "food_stop": null,
+        "dinner": {
+          "name": "RESTAURANT , JAIPUR",
+          "kind": "restaurant",
+          "lat": 26.9498381,
+          "lon": 75.8421508,
+          "distance_km": 1.6,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5227030921"
+        },
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "08:40:00",
+            "end": "08:40:00",
+            "kind": "start",
+            "title": "Check out of Rajputana Haveli",
+            "detail": "leave the bags at the desk",
+            "url": "https://www.openstreetmap.org/node/4483166712"
+          },
+          {
+            "start": "08:40:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ by road 2.3 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at The Tattoo Cafe",
+            "detail": "cafe, <0.1 km",
+            "url": "https://www.openstreetmap.org/node/5249299221"
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:50:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:50:00",
+            "end": "10:50:00",
+            "kind": "visit",
+            "title": "Badi Chaupar",
+            "detail": "for: bazaars",
+            "url": "https://en.wikipedia.org/wiki/Badi_Chaupar"
+          },
+          {
+            "start": "10:50:00",
+            "end": "11:10:00",
+            "kind": "travel",
+            "title": "→ by road 2.4 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:10:00",
+            "end": "13:40:00",
+            "kind": "visit",
+            "title": "Nahargarh Fort",
+            "detail": "for: forts",
+            "url": "https://en.wikipedia.org/wiki/Nahargarh_Fort"
+          },
+          {
+            "start": "13:40:00",
+            "end": "13:45:00",
+            "kind": "travel",
+            "title": "→ walk 0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "13:45:00",
+            "end": "14:45:00",
+            "kind": "lunch",
+            "title": "Lunch at Once Upon at Gath",
+            "detail": "restaurant, <0.1 km",
+            "url": "https://www.openstreetmap.org/node/13607613087"
+          },
+          {
+            "start": "14:45:00",
+            "end": "15:45:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "15:45:00",
+            "end": "16:15:00",
+            "kind": "travel",
+            "title": "→ by road 5.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "16:15:00",
+            "end": "17:15:00",
+            "kind": "visit",
+            "title": "Kanak Vrindavan",
+            "detail": "for: forts",
+            "url": "https://en.wikipedia.org/wiki/Kanak_Vrindavan"
+          },
+          {
+            "start": "17:15:00",
+            "end": "19:10:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Kanak Vrindavan",
+            "url": null
+          },
+          {
+            "start": "19:10:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ by road 2.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner at RESTAURANT , JAIPUR",
+            "detail": "restaurant, 1.6 km",
+            "url": "https://www.openstreetmap.org/node/5227030921"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:50:00",
+            "kind": "travel",
+            "title": "→ by road 2.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:50:00",
+            "end": "21:05:00",
+            "kind": "bags",
+            "title": "Collect the bags from Rajputana Haveli",
+            "detail": "",
+            "url": "https://www.openstreetmap.org/node/4483166712"
+          },
+          {
+            "start": "21:05:00",
+            "end": "21:05:00",
+            "kind": "end",
+            "title": "End of the trip",
+            "detail": "",
+            "url": null
+          }
+        ]
+      }
+    ],
+    "unused": [
+      {
+        "name": "Maota Lake",
+        "lat": 26.98333333,
+        "lon": 75.8525,
+        "distance_km": 9.6,
+        "description": "Lake in Rajasthan, India",
+        "serves": "place_type",
+        "wish": "forts",
+        "category": "history",
+        "indoor": false,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Maota_Lake",
+        "pageviews": 478,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Hawa Mahal",
+        "lat": 26.9239,
+        "lon": 75.8267,
+        "distance_km": 3.9,
+        "description": "Palace in Jaipur, Rajasthan, India",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "history",
+        "indoor": true,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Hawa_Mahal",
+        "pageviews": 26705,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Jal Mahal",
+        "lat": 26.9537,
+        "lon": 75.8463,
+        "distance_km": 6.9,
+        "description": "Palace in Jaipur, Rajasthan",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "history",
+        "indoor": true,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Jal_Mahal",
+        "pageviews": 19694,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Jantar Mantar, Jaipur",
+        "lat": 26.92472,
+        "lon": 75.82444,
+        "distance_km": 3.7,
+        "description": "UNESCO World Heritage Site in Jaipur",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "history",
+        "indoor": false,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Jantar_Mantar,_Jaipur",
+        "pageviews": 12085,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "City Palace, Jaipur",
+        "lat": 26.9257,
+        "lon": 75.8236,
+        "distance_km": 3.6,
+        "description": "Building in Rajasthan, India",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "history",
+        "indoor": true,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/City_Palace,_Jaipur",
+        "pageviews": 8927,
+        "source": "Wikipedia"
+      }
+    ],
+    "notes": []
+  },
+  "cost": {
+    "hotel": 3000.0,
+    "food": 2400.0,
+    "local_travel": 3000.0,
+    "tickets": 600.0,
+    "total": 9000.0,
+    "choices": {
+      "hotel_tier": "mid",
+      "food_tier": "mid",
+      "transport": "cab",
+      "hotel_outside_centre": false
+    },
+    "rooms": 1,
+    "vehicles": 1
+  },
+  "verdict": {
+    "status": "within",
+    "total": 9000.0,
+    "ceiling": 12000.0,
+    "floor": null,
+    "gap": 0.0
+  },
+  "first_cost": 9000.0,
+  "replan_rounds": 0,
+  "budget_changes": [],
+  "notes": [
+    "Group size not given, so 1 traveller was assumed.",
+    "Budget of Rs 12,000 was treated as a maximum, because the words 'around 12000' did not say whether it can be exceeded.",
+    "The weather forecast could not be fetched, so the plan has no weather adjustments. Please check the forecast before you go.",
+    "Because you chose Amber Fort, other historic sights were preferred among the popular ones."
+  ],
+  "errors": [
+    {
+      "where": "weather",
+      "error_type": "timeout",
+      "message": "injected failure (--inject-failure): simulated timeout (after 3 attempt(s))",
+      "handled_by": "continued without a forecast"
+    }
+  ],
+  "assumptions": [
+    "Prices are assumed (there is no free live price API for India): hotel Rs 3,000 per room per night (mid), food Rs 1,200 per person per day (mid), cab Rs 1,500 per day (config.py).",
+    "Each sight is assumed to cost Rs 100 per person to enter; 2 people share a room and 4 share a cab.",
+    "Sights come from Wikipedia within 25 km of the base city; 'popular' means most read on Wikipedia in the last 60 days.",
+    "Must-visit places farther than 60 km from the base city are not planned.",
+    "Weather comes from the Open-Meteo forecast, which reaches 16 days ahead.",
+    "At most 3 places are planned per day.",
+    "Stays and places to eat come from OpenStreetMap, which has no prices or ratings: a stay is chosen for the planned price level and for being near the next day's places, not for its quality.",
+    "A hotel 3-8 km outside the centre is assumed to cost 25% less.",
+    "The traveller reaches the city early on day 1, goes to the first night's hotel and leaves the bags at the desk (15 min; check-in is later), and is at breakfast by 09:00. On the last day the bags stay at the hotel desk after check-out and are collected in the evening. Arrival and departure travel to the city are not planned.",
+    "Each day runs from 09:00 (breakfast, 45 min); sightseeing ends by 19:00, and a place that would end later moves to 'If you have more time'. Lunch (60 min) comes between 11:30 and 14:30, followed by 1 h of rest; the evening meal is at 19:30.",
+    "Visit lengths are assumed by kind of place (fort, fortress, zoo 2 h 30 min; palace 2 h; museum, gallery, market 1 h 30 min; temple, mandir, lake 1 h; cenotaph, stepwell, baori 45 min; clock tower, gate, statue 30 min; other places 1 h). Travel: up to 1 km is walked at 4.5 km/h; longer trips go by road at 20 km/h plus 10 min to find a ride, with roads 1.3x the straight-line distance."
+  ],
+  "sources": [
+    "Open-Meteo geocoding and forecast: https://open-meteo.com",
+    "Wikipedia (places, descriptions, page views): https://en.wikipedia.org",
+    "OpenStreetMap via the Overpass API (stays and places to eat): https://www.openstreetmap.org",
+    "Wikivoyage: https://en.wikivoyage.org/wiki/Jaipur"
+  ],
+  "trace": [
+    {
+      "node": "extract",
+      "event": "llm_extract",
+      "detail": {
+        "destination": "Jaipur",
+        "start": {
+          "phrase": "this weekend",
+          "kind": "weekend",
+          "day": null,
+          "month": null,
+          "year": null,
+          "offset_days": null,
+          "weekday": null,
+          "which": "this"
+        },
+        "end": null,
+        "days": 2,
+        "travellers": null,
+        "budget_phrase": "around 12000",
+        "budget_amount": 12000.0,
+        "budget_amount_max": null,
+        "budget_is_per_person": false,
+        "budget_is_per_day": false,
+        "budget_direction": "not_stated",
+        "budget_style": null,
+        "must_visit": [
+          "Amber Fort"
+        ],
+        "place_types": [
+          {
+            "words": "forts",
+            "interests": [
+              "history"
+            ]
+          },
+          {
+            "words": "bazaars",
+            "interests": [
+              "shopping"
+            ]
+          }
+        ],
+        "interests": []
+      },
+      "duration_ms": 2787,
+      "timestamp": "2026-10-13T20:31:38.295759"
+    },
+    {
+      "node": "normalize",
+      "event": "normalize",
+      "detail": {
+        "days": 2,
+        "nights": 1,
+        "start_date": "2026-10-17",
+        "travellers": 1,
+        "total_budget": 12000.0,
+        "notes_added": 2
+      },
+      "duration_ms": 0,
+      "timestamp": "2026-10-13T20:31:38.301254"
+    },
+    {
+      "node": "planner",
+      "event": "plan",
+      "detail": {
+        "facts": "Trip facts:\n  Destination: \"Jaipur\" (not in the list of Indian states)\n  Dates: 17 Oct – 18 Oct 2026, 2 days; the trip starts in 4 days; a forecast IS available\n  Travellers: 1\n  Budget: target Rs 12,000 for the whole group, must not cost more than Rs 12,000\n  Style: not stated\n  Must visit: Amber Fort\n  Kinds of place: \"forts\" (history); \"bazaars\" (shopping)\n  Purposes: history (already served by a kind of place); shopping (already served by a kind of place)",
+        "summary": "2 days in Jaipur around the Amber Fort, forts, and bazaars.",
+        "steps": [
+          {
+            "step": 1,
+            "tool": "resolve_destination",
+            "query": null,
+            "serves": null,
+            "reason": "Find Jaipur on the map; every later step searches around it."
+          },
+          {
+            "step": 2,
+            "tool": "weather",
+            "query": null,
+            "serves": null,
+            "reason": "The trip starts in 4 days, so the forecast can guide outdoor plans."
+          },
+          {
+            "step": 3,
+            "tool": "locate_place",
+            "query": "Amber Fort",
+            "serves": "must_visit",
+            "reason": "You must see the Amber Fort."
+          },
+          {
+            "step": 4,
+            "tool": "find_places",
+            "query": "fort",
+            "serves": "place_type",
+            "reason": "You want to see forts; 'fort' is what such a place is called."
+          },
+          {
+            "step": 5,
+            "tool": "find_places",
+            "query": "bazaar",
+            "serves": "place_type",
+            "reason": "You want to see bazaars; 'bazaar' is what such a place is called."
+          },
+          {
+            "step": 6,
+            "tool": "find_places",
+            "query": "tourist attraction",
+            "serves": "popular",
+            "reason": "Fill the free time with Jaipur's best-known sights."
+          },
+          {
+            "step": 7,
+            "tool": "build_itinerary",
+            "query": null,
+            "serves": null,
+            "reason": "Put the places into days, most important first."
+          },
+          {
+            "step": 8,
+            "tool": "find_stays_and_food",
+            "query": null,
+            "serves": null,
+            "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+          },
+          {
+            "step": 9,
+            "tool": "estimate_costs",
+            "query": null,
+            "serves": null,
+            "reason": "Price the stay, food, travel and tickets."
+          },
+          {
+            "step": 10,
+            "tool": "check_budget",
+            "query": null,
+            "serves": null,
+            "reason": "Compare the cost with your budget."
+          }
+        ]
+      },
+      "duration_ms": 4143,
+      "timestamp": "2026-10-13T20:31:42.448627"
+    },
+    {
+      "node": "executor",
+      "event": "wikivoyage_ok",
+      "detail": {
+        "args": [
+          "Jaipur"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1832,
+      "timestamp": "2026-10-13T20:31:44.290352"
+    },
+    {
+      "node": "executor",
+      "event": "geocode_ok",
+      "detail": {
+        "args": [
+          "Jaipur"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 976,
+      "timestamp": "2026-10-13T20:31:45.266897"
+    },
+    {
+      "node": "executor",
+      "event": "weather_failed",
+      "detail": {
+        "args": [
+          "name='Jaipur' lat=26.91962 lon=75.78781 region='Rajasthan' feature_code='PPLA' population=3046163 source='Open-Meteo geocoding'",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-13"
+        ],
+        "error_type": "timeout",
+        "message": "injected failure (--inject-failure): simulated timeout",
+        "attempts": 3,
+        "next": "continued without a forecast"
+      },
+      "duration_ms": 1500,
+      "timestamp": "2026-10-13T20:31:46.767861"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "Amber Fort",
+          "name='Jaipur' lat=26.91962 lon=75.78781 region='Rajasthan' feature_code='PPLA' population=3046163 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1054,
+      "timestamp": "2026-10-13T20:31:47.822255"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "fort",
+          "name='Jaipur' lat=26.91962 lon=75.78781 region='Rajasthan' feature_code='PPLA' population=3046163 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1064,
+      "timestamp": "2026-10-13T20:31:48.886749"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "bazaar",
+          "name='Jaipur' lat=26.91962 lon=75.78781 region='Rajasthan' feature_code='PPLA' population=3046163 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 967,
+      "timestamp": "2026-10-13T20:31:49.854647"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "tourist attraction",
+          "name='Jaipur' lat=26.91962 lon=75.78781 region='Rajasthan' feature_code='PPLA' population=3046163 source='Open-Meteo geocoding'",
+          "6",
+          "{'history'}"
+        ],
+        "attempts": 2
+      },
+      "duration_ms": 2719,
+      "timestamp": "2026-10-13T20:31:52.574439"
+    },
+    {
+      "node": "find_stays_and_food",
+      "event": "osm_ok",
+      "detail": {
+        "args": [
+          "[(26.986226666666667, 75.85062333333333), (26.941601163333335, 75.83000566333334)]",
+          "[(26.9859, 75.8507), (26.9859, 75.8507), (26.98688, 75.85047), (26.9239846, 75.8271381), (26.937255, 75.81549), (26.96356389, 75.84738889)]"
+        ],
+        "attempts": 1,
+        "found": {
+          "cafe": 17,
+          "fast_food": 10,
+          "food_court": 1,
+          "guest_house": 36,
+          "hostel": 21,
+          "hotel": 131,
+          "restaurant": 33
+        },
+        "server": "overpass-api.de"
+      },
+      "duration_ms": 10597,
+      "timestamp": "2026-10-13T20:32:03.185601"
+    },
+    {
+      "node": "budget_check",
+      "event": "cost",
+      "detail": {
+        "total": 9000.0,
+        "status": "within",
+        "gap": 0,
+        "choices": {
+          "hotel_tier": "mid",
+          "food_tier": "mid",
+          "transport": "cab",
+          "hotel_outside_centre": false
+        }
+      },
+      "duration_ms": null,
+      "timestamp": "2026-10-13T20:32:03.189734"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "today": "2026-10-12",
+  "note": "Final date holdout, written 2026-10-13 after all date fixes. Only dates are scored. Ten hard phrasings; cities and phrasings differ from every other test set, the unit tests and the prompt. Run once. | DF-10 expectation corrected after the first run: it had ignored the documented 10-day cap (config.MAX_DAYS).",
+  "cases": [
+    {
+      "id": "DF-01",
+      "goal": "Kasol trip starting on the 31st of October, 4 days",
+      "edge": "trip crosses from October into November",
+      "expect": {
+        "days": 4
+      },
+      "expect_final": {
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-03"
+      }
+    },
+    {
+      "id": "DF-02",
+      "goal": "Lonavala over the weekend after next",
+      "edge": "'weekend after next' is two weekends away",
+      "expect": {},
+      "expect_final": {
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-01"
+      }
+    },
+    {
+      "id": "DF-03",
+      "goal": "Mathura from 29 Dec to 3 Jan, 2 people",
+      "edge": "two separate dates, the second in the next year",
+      "expect": {},
+      "expect_final": {
+        "start_date": "2026-12-29",
+        "end_date": "2027-01-03",
+        "days": 6
+      }
+    },
+    {
+      "id": "DF-04",
+      "goal": "Alleppey houseboat on Friday the 16th for 2 days",
+      "edge": "a weekday and a day number together",
+      "expect": {
+        "days": 2
+      },
+      "expect_final": {
+        "start_date": "2026-10-16",
+        "end_date": "2026-10-17"
+      }
+    },
+    {
+      "id": "DF-05",
+      "goal": "Chikmagalur, leaving tomorrow and back on Saturday",
+      "edge": "relative start, weekday end",
+      "expect": {},
+      "expect_final": {
+        "start_date": "2026-10-13",
+        "end_date": "2026-10-17",
+        "days": 5
+      }
+    },
+    {
+      "id": "DF-06",
+      "goal": "Dalhousie from 2nd Nov till 9th Nov, but only 5 days",
+      "edge": "length and dates disagree; both must be recorded, the dates win",
+      "expect": {
+        "days": 5
+      },
+      "expect_final": {
+        "start_date": "2026-11-02",
+        "end_date": "2026-11-09",
+        "days": 8
+      }
+    },
+    {
+      "id": "DF-07",
+      "goal": "Pachmarhi trip sometime in the first week of November",
+      "edge": "a vague period is not a date, so the default start (tomorrow) applies",
+      "expect": {
+        "start": null,
+        "end": null
+      },
+      "expect_final": {
+        "start_date": "2026-10-13"
+      }
+    },
+    {
+      "id": "DF-08",
+      "goal": "Lansdowne this Monday for 2 days",
+      "edge": "today is Monday; a weekday named today means next week",
+      "expect": {
+        "days": 2
+      },
+      "expect_final": {
+        "start_date": "2026-10-19",
+        "end_date": "2026-10-20"
+      }
+    },
+    {
+      "id": "DF-09",
+      "goal": "Bundi on 5/11 for 3 days",
+      "edge": "numeric day/month (Indian format)",
+      "expect": {
+        "days": 3
+      },
+      "expect_final": {
+        "start_date": "2026-11-05",
+        "end_date": "2026-11-07"
+      }
+    },
+    {
+      "id": "DF-10",
+      "goal": "Orchha the day after tomorrow, returning next Sunday",
+      "edge": "'next Sunday' as the end is 25 Oct (next week); 14-25 Oct is 12 days, so the documented 10-day cap (config.MAX_DAYS) ends the trip on 23 Oct",
+      "expect": {},
+      "expect_final": {
+        "start_date": "2026-10-14",
+        "end_date": "2026-10-23",
+        "days": 10
+      }
+    }
+  ]
+}

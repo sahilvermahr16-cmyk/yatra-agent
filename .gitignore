@@ -1,0 +1,23 @@
+# Secrets (copy .env.example to .env and add your key)
+.env
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache and test cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local scratch
+_to_delete/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Output of the latest partial e2e run (the kept results are e2e_results_first / _dev_final / e2e_holdout_results)
+eval/e2e_results.md

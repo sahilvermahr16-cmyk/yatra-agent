@@ -1,0 +1,1542 @@
+{
+  "goal": "4 days in Udaipur for 2 people, must see City Palace, love lakes, max 15000 total",
+  "status": "done",
+  "created_at": "2026-10-13T20:44:25.086085",
+  "request": {
+    "destination": "Udaipur",
+    "start": null,
+    "end": null,
+    "days": 4,
+    "travellers": 2,
+    "budget_phrase": "max 15000 total",
+    "budget_amount": 15000.0,
+    "budget_amount_max": null,
+    "budget_is_per_person": false,
+    "budget_is_per_day": false,
+    "budget_direction": "at_most",
+    "budget_style": null,
+    "must_visit": [
+      "City Palace"
+    ],
+    "place_types": [
+      {
+        "words": "lakes",
+        "interests": [
+          "nature"
+        ]
+      }
+    ],
+    "interests": [
+      "nature"
+    ],
+    "start_date": "2026-10-14",
+    "end_date": "2026-10-17",
+    "destination_type": null,
+    "base_city": null,
+    "nights": 3,
+    "total_budget": 15000.0,
+    "budget_ceiling": 15000.0,
+    "budget_floor": null
+  },
+  "destination": {
+    "query": "Udaipur",
+    "destination_type": "city",
+    "wikivoyage_title": "Udaipur",
+    "candidates": [],
+    "base_city": "Udaipur",
+    "choice_reason": "Udaipur was named by the user.",
+    "location": {
+      "name": "Udaipur",
+      "lat": 24.58584,
+      "lon": 73.71346,
+      "region": "Rajasthan",
+      "feature_code": "PPL",
+      "population": 451100,
+      "source": "Open-Meteo geocoding"
+    },
+    "used_fallback": false
+  },
+  "plan": {
+    "summary": "4 days in Udaipur around the City Palace and lakes.",
+    "steps": [
+      {
+        "step": 1,
+        "tool": "resolve_destination",
+        "query": null,
+        "serves": null,
+        "reason": "Find Udaipur on the map; every later step searches around it."
+      },
+      {
+        "step": 2,
+        "tool": "weather",
+        "query": null,
+        "serves": null,
+        "reason": "The trip starts in 1 day, so the forecast can guide outdoor plans."
+      },
+      {
+        "step": 3,
+        "tool": "locate_place",
+        "query": "City Palace",
+        "serves": "must_visit",
+        "reason": "You must see the City Palace."
+      },
+      {
+        "step": 4,
+        "tool": "find_places",
+        "query": "lake",
+        "serves": "place_type",
+        "reason": "You want to visit lakes; 'lake' is what such a place is called."
+      },
+      {
+        "step": 5,
+        "tool": "find_places",
+        "query": "tourist attraction",
+        "serves": "popular",
+        "reason": "Fill the free time with Udaipur's best-known sights."
+      },
+      {
+        "step": 6,
+        "tool": "build_itinerary",
+        "query": null,
+        "serves": null,
+        "reason": "Put the places into days, most important first."
+      },
+      {
+        "step": 7,
+        "tool": "find_stays_and_food",
+        "query": null,
+        "serves": null,
+        "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+      },
+      {
+        "step": 8,
+        "tool": "estimate_costs",
+        "query": null,
+        "serves": null,
+        "reason": "Price the stay, food, travel and tickets."
+      },
+      {
+        "step": 9,
+        "tool": "check_budget",
+        "query": null,
+        "serves": null,
+        "reason": "Compare the cost with your budget."
+      }
+    ]
+  },
+  "step_results": [
+    {
+      "step": 1,
+      "tool": "resolve_destination",
+      "ok": true,
+      "summary": "city -> base city Udaipur (24.586, 73.713)"
+    },
+    {
+      "step": 2,
+      "tool": "weather",
+      "ok": true,
+      "summary": "4 day(s) of forecast, 0 likely rainy"
+    },
+    {
+      "step": 3,
+      "tool": "locate_place",
+      "ok": true,
+      "summary": "City Palace, Udaipur found, 3.6 km from Udaipur"
+    },
+    {
+      "step": 4,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'lake': 6 found, 6 new (Lake Palace, Lake Pichola, Fateh Sagar Lake...)"
+    },
+    {
+      "step": 5,
+      "tool": "find_places",
+      "ok": true,
+      "summary": "'tourist attraction': 12 found, 9 new (Jag Mandir Palace, Shiv Niwas Palace, Ahar Cenotaphs...)"
+    }
+  ],
+  "weather": [
+    {
+      "date": "2026-10-14",
+      "temp_max_c": 33.4,
+      "temp_min_c": 24.4,
+      "rain_probability": 8,
+      "summary": "Mainly clear"
+    },
+    {
+      "date": "2026-10-15",
+      "temp_max_c": 33.7,
+      "temp_min_c": 24.3,
+      "rain_probability": 31,
+      "summary": "Partly cloudy"
+    },
+    {
+      "date": "2026-10-16",
+      "temp_max_c": 33.5,
+      "temp_min_c": 24.1,
+      "rain_probability": 14,
+      "summary": "Mainly clear"
+    },
+    {
+      "date": "2026-10-17",
+      "temp_max_c": 33.3,
+      "temp_min_c": 23.7,
+      "rain_probability": 4,
+      "summary": "Mainly clear"
+    }
+  ],
+  "itinerary": {
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-10-14",
+        "weather": {
+          "date": "2026-10-14",
+          "temp_max_c": 33.4,
+          "temp_min_c": 24.4,
+          "rain_probability": 8,
+          "summary": "Mainly clear"
+        },
+        "places": [
+          {
+            "name": "City Palace, Udaipur",
+            "lat": 24.576,
+            "lon": 73.68,
+            "distance_km": 3.6,
+            "description": "Building in Udaipur, India",
+            "serves": "must_visit",
+            "wish": "City Palace",
+            "category": "popular",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/City_Palace,_Udaipur",
+            "pageviews": 10375,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Lake Palace",
+            "lat": 24.57507,
+            "lon": 73.68022,
+            "distance_km": 3.6,
+            "description": "Building in Udaipur, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Lake_Palace",
+            "pageviews": 6182,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Shiv Niwas Palace",
+            "lat": 24.5743288,
+            "lon": 73.6816858,
+            "distance_km": 3.5,
+            "description": "Royal palace in Udaipur, Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "history",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Shiv_Niwas_Palace",
+            "pageviews": 1513,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "City Palace, Udaipur (must visit); Lake Palace (you wanted lakes); Shiv Niwas Palace (popular sight). All within 0.3 km of each other. Mainly clear, 24-33 C, rain 8%.",
+        "stay": {
+          "name": "Shrikant Palace",
+          "kind": "hostel",
+          "lat": 24.5748226,
+          "lon": 73.6855158,
+          "distance_km": 0.8,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12412773603"
+        },
+        "breakfast": {
+          "name": "Foodiz",
+          "kind": "cafe",
+          "lat": 24.5791869,
+          "lon": 73.6798306,
+          "distance_km": 0.4,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12422505805"
+        },
+        "lunch": {
+          "name": "Sunset Terrace",
+          "kind": "restaurant",
+          "lat": 24.5754521,
+          "lon": 73.6830161,
+          "distance_km": 0.3,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/7332544334"
+        },
+        "food_stop": null,
+        "dinner": {
+          "name": "Palki Khana",
+          "kind": "restaurant",
+          "lat": 24.5763387,
+          "lon": 73.683904,
+          "distance_km": 0.3,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/7332544385"
+        },
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "08:05:00",
+            "end": "08:05:00",
+            "kind": "start",
+            "title": "Arrive in Udaipur",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:05:00",
+            "end": "08:30:00",
+            "kind": "travel",
+            "title": "→ by road 4.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:30:00",
+            "end": "08:45:00",
+            "kind": "bags",
+            "title": "Drop the bags at Shrikant Palace",
+            "detail": "check-in is later",
+            "url": "https://www.openstreetmap.org/node/12412773603"
+          },
+          {
+            "start": "08:45:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ walk 1.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Foodiz",
+            "detail": "cafe, 0.4 km",
+            "url": "https://www.openstreetmap.org/node/12422505805"
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:55:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:55:00",
+            "end": "11:55:00",
+            "kind": "visit",
+            "title": "City Palace, Udaipur",
+            "detail": "must visit",
+            "url": "https://en.wikipedia.org/wiki/City_Palace,_Udaipur"
+          },
+          {
+            "start": "11:55:00",
+            "end": "12:00:00",
+            "kind": "travel",
+            "title": "→ walk 0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:00:00",
+            "end": "14:00:00",
+            "kind": "visit",
+            "title": "Lake Palace",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Lake_Palace"
+          },
+          {
+            "start": "14:00:00",
+            "end": "14:05:00",
+            "kind": "travel",
+            "title": "→ walk 0.4 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "14:05:00",
+            "end": "15:05:00",
+            "kind": "lunch",
+            "title": "Lunch at Sunset Terrace",
+            "detail": "restaurant, 0.3 km",
+            "url": "https://www.openstreetmap.org/node/7332544334"
+          },
+          {
+            "start": "15:05:00",
+            "end": "16:05:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "16:05:00",
+            "end": "16:10:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "16:10:00",
+            "end": "18:10:00",
+            "kind": "visit",
+            "title": "Shiv Niwas Palace",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Shiv_Niwas_Palace"
+          },
+          {
+            "start": "18:10:00",
+            "end": "19:20:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Shiv Niwas Palace",
+            "url": null
+          },
+          {
+            "start": "19:20:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.4 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner at Palki Khana",
+            "detail": "restaurant, 0.3 km",
+            "url": "https://www.openstreetmap.org/node/7332544385"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:35:00",
+            "kind": "travel",
+            "title": "→ walk 0.3 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:35:00",
+            "end": "20:35:00",
+            "kind": "stay",
+            "title": "Check in at Shrikant Palace",
+            "detail": "hostel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/node/12412773603"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "date": "2026-10-15",
+        "weather": {
+          "date": "2026-10-15",
+          "temp_max_c": 33.7,
+          "temp_min_c": 24.3,
+          "rain_probability": 31,
+          "summary": "Partly cloudy"
+        },
+        "places": [
+          {
+            "name": "Lake Pichola",
+            "lat": 24.572,
+            "lon": 73.679,
+            "distance_km": 3.8,
+            "description": "Lake in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Lake_Pichola",
+            "pageviews": 5245,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Jag Mandir Palace",
+            "lat": 24.5672,
+            "lon": 73.6781,
+            "distance_km": 4.1,
+            "description": "Palace in Udaipur, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "history",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Jag_Mandir_Palace",
+            "pageviews": 3114,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Doodh Talai Lake",
+            "lat": 24.5684295,
+            "lon": 73.6847684,
+            "distance_km": 3.5,
+            "description": "Lake in Udaipur, Rajasthan, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Doodh_Talai_Lake",
+            "pageviews": 364,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Lake Pichola (you wanted lakes); Jag Mandir Palace (popular sight); Doodh Talai Lake (you wanted lakes). All within 0.7 km of each other. Partly cloudy, 24-34 C, rain 31%.",
+        "stay": {
+          "name": "Shrikant Palace",
+          "kind": "hostel",
+          "lat": 24.5748226,
+          "lon": 73.6855158,
+          "distance_km": 1.5,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12412773603"
+        },
+        "breakfast": {
+          "name": "Blue Box Coffee",
+          "kind": "cafe",
+          "lat": 24.5739611,
+          "lon": 73.6862322,
+          "distance_km": 0.8,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12430934002"
+        },
+        "lunch": {
+          "name": "Om Sai Ram",
+          "kind": "restaurant",
+          "lat": 24.5663667,
+          "lon": 73.6850341,
+          "distance_km": 0.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/2377178388"
+        },
+        "food_stop": null,
+        "dinner": {
+          "name": "Amritsariyat",
+          "kind": "restaurant",
+          "lat": 24.5737432,
+          "lon": 73.686865,
+          "distance_km": 0.6,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12412773703"
+        },
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "08:55:00",
+            "end": "08:55:00",
+            "kind": "start",
+            "title": "Leave Shrikant Palace",
+            "detail": "",
+            "url": "https://www.openstreetmap.org/node/12412773603"
+          },
+          {
+            "start": "08:55:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Blue Box Coffee",
+            "detail": "cafe, 0.8 km",
+            "url": "https://www.openstreetmap.org/node/12430934002"
+          },
+          {
+            "start": "09:45:00",
+            "end": "10:00:00",
+            "kind": "travel",
+            "title": "→ walk 1.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "10:00:00",
+            "end": "11:00:00",
+            "kind": "visit",
+            "title": "Lake Pichola",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Lake_Pichola"
+          },
+          {
+            "start": "11:00:00",
+            "end": "11:10:00",
+            "kind": "travel",
+            "title": "→ walk 0.7 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:10:00",
+            "end": "13:10:00",
+            "kind": "visit",
+            "title": "Jag Mandir Palace",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Jag_Mandir_Palace"
+          },
+          {
+            "start": "13:10:00",
+            "end": "13:25:00",
+            "kind": "travel",
+            "title": "→ walk 0.9 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "13:25:00",
+            "end": "14:25:00",
+            "kind": "lunch",
+            "title": "Lunch at Om Sai Ram",
+            "detail": "restaurant, 0.7 km",
+            "url": "https://www.openstreetmap.org/node/2377178388"
+          },
+          {
+            "start": "14:25:00",
+            "end": "15:25:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "15:25:00",
+            "end": "15:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.3 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "15:30:00",
+            "end": "16:30:00",
+            "kind": "visit",
+            "title": "Doodh Talai Lake",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Doodh_Talai_Lake"
+          },
+          {
+            "start": "16:30:00",
+            "end": "19:15:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Doodh Talai Lake",
+            "url": null
+          },
+          {
+            "start": "19:15:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.8 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner at Amritsariyat",
+            "detail": "restaurant, 0.6 km",
+            "url": "https://www.openstreetmap.org/node/12412773703"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:35:00",
+            "kind": "travel",
+            "title": "→ walk 0.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:35:00",
+            "end": "20:35:00",
+            "kind": "stay",
+            "title": "Night at Shrikant Palace",
+            "detail": "hostel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/node/12412773603"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "date": "2026-10-16",
+        "weather": {
+          "date": "2026-10-16",
+          "temp_max_c": 33.5,
+          "temp_min_c": 24.1,
+          "rain_probability": 14,
+          "summary": "Mainly clear"
+        },
+        "places": [
+          {
+            "name": "Fateh Sagar Lake",
+            "lat": 24.6,
+            "lon": 73.67,
+            "distance_km": 4.7,
+            "description": "Lake in Udaipur, Rajasthan, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Fateh_Sagar_Lake",
+            "pageviews": 2618,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Bagore Ki Haveli",
+            "lat": 24.5796687,
+            "lon": 73.6800357,
+            "distance_km": 3.4,
+            "description": "Haveli in Udaipur, Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "history",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Bagore_Ki_Haveli",
+            "pageviews": 1052,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Jagdish Temple, Udaipur",
+            "lat": 24.579834,
+            "lon": 73.68386083,
+            "distance_km": 3.1,
+            "description": "Hindu temple in Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "religious",
+            "indoor": true,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Jagdish_Temple,_Udaipur",
+            "pageviews": 3660,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Fateh Sagar Lake (you wanted lakes); Bagore Ki Haveli (popular sight); Jagdish Temple, Udaipur (popular sight). All within 2.6 km of each other. Mainly clear, 24-34 C, rain 14%.",
+        "stay": {
+          "name": "Boys Hostel MB College",
+          "kind": "hostel",
+          "lat": 24.5781243,
+          "lon": 73.7154803,
+          "distance_km": 1.6,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/way/528947667"
+        },
+        "breakfast": {
+          "name": "Udaipur Traditional restaurant",
+          "kind": "restaurant",
+          "lat": 24.6015358,
+          "lon": 73.6639779,
+          "distance_km": 0.6,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/10214436014"
+        },
+        "lunch": {
+          "name": "Old Legacy",
+          "kind": "restaurant",
+          "lat": 24.5797982,
+          "lon": 73.6838397,
+          "distance_km": 0.0,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12424701820"
+        },
+        "food_stop": null,
+        "dinner": {
+          "name": "The Royal Taste if Marwar",
+          "kind": "restaurant",
+          "lat": 24.5798524,
+          "lon": 73.6837607,
+          "distance_km": 0.0,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/12508956701"
+        },
+        "day_notes": [],
+        "timeline": [
+          {
+            "start": "07:45:00",
+            "end": "07:45:00",
+            "kind": "start",
+            "title": "Check out of Shrikant Palace",
+            "detail": "take the bags along",
+            "url": "https://www.openstreetmap.org/node/12412773603"
+          },
+          {
+            "start": "07:45:00",
+            "end": "08:10:00",
+            "kind": "travel",
+            "title": "→ by road 4.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "08:10:00",
+            "end": "08:25:00",
+            "kind": "bags",
+            "title": "Drop the bags at Boys Hostel MB College",
+            "detail": "check-in is later",
+            "url": "https://www.openstreetmap.org/way/528947667"
+          },
+          {
+            "start": "08:25:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ by road 7.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast at Udaipur Traditional restaurant",
+            "detail": "restaurant, 0.6 km",
+            "url": "https://www.openstreetmap.org/node/10214436014"
+          },
+          {
+            "start": "09:45:00",
+            "end": "10:00:00",
+            "kind": "travel",
+            "title": "→ walk 0.8 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "10:00:00",
+            "end": "11:00:00",
+            "kind": "visit",
+            "title": "Fateh Sagar Lake",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Fateh_Sagar_Lake"
+          },
+          {
+            "start": "11:00:00",
+            "end": "11:20:00",
+            "kind": "travel",
+            "title": "→ by road 3.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:20:00",
+            "end": "12:20:00",
+            "kind": "visit",
+            "title": "Bagore Ki Haveli",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Bagore_Ki_Haveli"
+          },
+          {
+            "start": "12:20:00",
+            "end": "12:30:00",
+            "kind": "travel",
+            "title": "→ walk 0.5 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:30:00",
+            "end": "13:30:00",
+            "kind": "visit",
+            "title": "Jagdish Temple, Udaipur",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Jagdish_Temple,_Udaipur"
+          },
+          {
+            "start": "13:30:00",
+            "end": "13:35:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "13:35:00",
+            "end": "14:35:00",
+            "kind": "lunch",
+            "title": "Lunch at Old Legacy",
+            "detail": "restaurant, <0.1 km",
+            "url": "https://www.openstreetmap.org/node/12424701820"
+          },
+          {
+            "start": "14:35:00",
+            "end": "15:35:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "15:35:00",
+            "end": "19:25:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Jagdish Temple, Udaipur",
+            "url": null
+          },
+          {
+            "start": "19:25:00",
+            "end": "19:30:00",
+            "kind": "travel",
+            "title": "→ walk <0.1 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner at The Royal Taste if Marwar",
+            "detail": "restaurant, <0.1 km",
+            "url": "https://www.openstreetmap.org/node/12508956701"
+          },
+          {
+            "start": "20:30:00",
+            "end": "20:55:00",
+            "kind": "travel",
+            "title": "→ by road 4.2 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:55:00",
+            "end": "20:55:00",
+            "kind": "stay",
+            "title": "Check in at Boys Hostel MB College",
+            "detail": "hostel, near tomorrow's places",
+            "url": "https://www.openstreetmap.org/way/528947667"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "date": "2026-10-17",
+        "weather": {
+          "date": "2026-10-17",
+          "temp_max_c": 33.3,
+          "temp_min_c": 23.7,
+          "rain_probability": 4,
+          "summary": "Mainly clear"
+        },
+        "places": [
+          {
+            "name": "Lake Badi",
+            "lat": 24.616105,
+            "lon": 73.622127,
+            "distance_km": 9.8,
+            "description": "Lake in Rajasthan, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Lake_Badi",
+            "pageviews": 366,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Ahar Cenotaphs",
+            "lat": 24.58777778,
+            "lon": 73.71944444,
+            "distance_km": 0.6,
+            "description": "Memorial site in Udaipur, Rajasthan, India",
+            "serves": "popular",
+            "wish": "best-known sights",
+            "category": "history",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Ahar_Cenotaphs",
+            "pageviews": 1095,
+            "source": "Wikipedia"
+          },
+          {
+            "name": "Udai Sagar Lake",
+            "lat": 24.570811,
+            "lon": 73.821351,
+            "distance_km": 11.0,
+            "description": "Lake in Udaipur, India",
+            "serves": "place_type",
+            "wish": "lakes",
+            "category": "nature",
+            "indoor": false,
+            "entry_fee": 100.0,
+            "url": "https://en.wikipedia.org/wiki/Udai_Sagar_Lake",
+            "pageviews": 272,
+            "source": "Wikipedia"
+          }
+        ],
+        "reason": "Lake Badi (you wanted lakes); Ahar Cenotaphs (popular sight); Udai Sagar Lake (you wanted lakes). All within 20.8 km of each other. Mainly clear, 24-33 C, rain 4%.",
+        "stay": null,
+        "breakfast": null,
+        "lunch": {
+          "name": "Raajwada",
+          "kind": "restaurant",
+          "lat": 24.5873903,
+          "lon": 73.7121276,
+          "distance_km": 0.7,
+          "stars": null,
+          "url": "https://www.openstreetmap.org/node/5068266009"
+        },
+        "food_stop": null,
+        "dinner": null,
+        "day_notes": [
+          "No cafe or restaurant was found within 1.5 km of Lake Badi on OpenStreetMap; have breakfast near your stay before leaving."
+        ],
+        "timeline": [
+          {
+            "start": "08:05:00",
+            "end": "08:05:00",
+            "kind": "start",
+            "title": "Check out of Boys Hostel MB College",
+            "detail": "leave the bags at the desk",
+            "url": "https://www.openstreetmap.org/way/528947667"
+          },
+          {
+            "start": "08:05:00",
+            "end": "09:00:00",
+            "kind": "travel",
+            "title": "→ by road 13.4 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:00:00",
+            "end": "09:45:00",
+            "kind": "breakfast",
+            "title": "Breakfast near your stay",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:45:00",
+            "end": "09:55:00",
+            "kind": "travel",
+            "title": "→ to Lake Badi",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "09:55:00",
+            "end": "10:55:00",
+            "kind": "visit",
+            "title": "Lake Badi",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Lake_Badi"
+          },
+          {
+            "start": "10:55:00",
+            "end": "11:50:00",
+            "kind": "travel",
+            "title": "→ by road 13.4 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "11:50:00",
+            "end": "12:35:00",
+            "kind": "visit",
+            "title": "Ahar Cenotaphs",
+            "detail": "popular sight",
+            "url": "https://en.wikipedia.org/wiki/Ahar_Cenotaphs"
+          },
+          {
+            "start": "12:35:00",
+            "end": "12:50:00",
+            "kind": "travel",
+            "title": "→ walk 1.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "12:50:00",
+            "end": "13:50:00",
+            "kind": "lunch",
+            "title": "Lunch at Raajwada",
+            "detail": "restaurant, 0.7 km",
+            "url": "https://www.openstreetmap.org/node/5068266009"
+          },
+          {
+            "start": "13:50:00",
+            "end": "14:50:00",
+            "kind": "rest",
+            "title": "Rest",
+            "detail": "a break in the middle of the day",
+            "url": null
+          },
+          {
+            "start": "14:50:00",
+            "end": "15:45:00",
+            "kind": "travel",
+            "title": "→ by road 14.6 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "15:45:00",
+            "end": "16:45:00",
+            "kind": "visit",
+            "title": "Udai Sagar Lake",
+            "detail": "for: lakes",
+            "url": "https://en.wikipedia.org/wiki/Udai_Sagar_Lake"
+          },
+          {
+            "start": "16:45:00",
+            "end": "19:30:00",
+            "kind": "free",
+            "title": "Free time",
+            "detail": "rest, or look around Udai Sagar Lake",
+            "url": null
+          },
+          {
+            "start": "19:30:00",
+            "end": "20:30:00",
+            "kind": "dinner",
+            "title": "Dinner near your stay",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "20:30:00",
+            "end": "21:25:00",
+            "kind": "travel",
+            "title": "→ by road 14.0 km",
+            "detail": "",
+            "url": null
+          },
+          {
+            "start": "21:25:00",
+            "end": "21:40:00",
+            "kind": "bags",
+            "title": "Collect the bags from Boys Hostel MB College",
+            "detail": "",
+            "url": "https://www.openstreetmap.org/way/528947667"
+          },
+          {
+            "start": "21:40:00",
+            "end": "21:40:00",
+            "kind": "end",
+            "title": "End of the trip",
+            "detail": "",
+            "url": null
+          }
+        ]
+      }
+    ],
+    "unused": [
+      {
+        "name": "Saheliyon-ki-Bari",
+        "lat": 24.60277778,
+        "lon": 73.68527778,
+        "distance_km": 3.4,
+        "description": "Garden in Udaipur, India",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "nature",
+        "indoor": false,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Saheliyon-ki-Bari",
+        "pageviews": 1204,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Karni Mata, Udaipur",
+        "lat": 24.56586,
+        "lon": 73.68830483,
+        "distance_km": 3.4,
+        "description": "Hindu temple in Rajasthan, India",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "religious",
+        "indoor": true,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Karni_Mata,_Udaipur",
+        "pageviews": 979,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Neemach Mata Temple",
+        "lat": 24.61,
+        "lon": 73.67805556,
+        "distance_km": 4.5,
+        "description": "Hindu temple in Rajasthan, India",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "religious",
+        "indoor": true,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Neemach_Mata_Temple",
+        "pageviews": 542,
+        "source": "Wikipedia"
+      },
+      {
+        "name": "Gangaur Ghat",
+        "lat": 24.579947,
+        "lon": 73.6817402,
+        "distance_km": 3.3,
+        "description": "Place",
+        "serves": "popular",
+        "wish": "best-known sights",
+        "category": "popular",
+        "indoor": false,
+        "entry_fee": 100.0,
+        "url": "https://en.wikipedia.org/wiki/Gangaur_Ghat",
+        "pageviews": 499,
+        "source": "Wikipedia"
+      }
+    ],
+    "notes": []
+  },
+  "cost": {
+    "hotel": 3600.0,
+    "food": 4800.0,
+    "local_travel": 3200.0,
+    "tickets": 2400.0,
+    "total": 14000.0,
+    "choices": {
+      "hotel_tier": "budget",
+      "food_tier": "budget",
+      "transport": "cab",
+      "hotel_outside_centre": false
+    },
+    "rooms": 1,
+    "vehicles": 1
+  },
+  "verdict": {
+    "status": "within",
+    "total": 14000.0,
+    "ceiling": 15000.0,
+    "floor": null,
+    "gap": 0.0
+  },
+  "first_cost": 27000.0,
+  "replan_rounds": 1,
+  "budget_changes": [
+    "mid -> budget hotel and cab",
+    "mid -> budget meals"
+  ],
+  "notes": [
+    "Start date not given, so the trip starts tomorrow (2026-10-14).",
+    "Several places in India are called Udaipur; the plan uses Udaipur, Rajasthan.",
+    "Because you chose City Palace, other historic sights were preferred among the popular ones.",
+    "Budget: the first draft cost Rs 27,000, outside your budget, so the agent changed: mid -> budget hotel and cab; mid -> budget meals. The plan now costs Rs 14,000."
+  ],
+  "errors": [],
+  "assumptions": [
+    "Prices are assumed (there is no free live price API for India): hotel Rs 1,200 per room per night (budget), food Rs 600 per person per day (budget), cab Rs 800 per day (config.py).",
+    "Each sight is assumed to cost Rs 100 per person to enter; 2 people share a room and 4 share a cab.",
+    "Sights come from Wikipedia within 25 km of the base city; 'popular' means most read on Wikipedia in the last 60 days.",
+    "Must-visit places farther than 60 km from the base city are not planned.",
+    "Weather comes from the Open-Meteo forecast, which reaches 16 days ahead.",
+    "At most 3 places are planned per day.",
+    "Stays and places to eat come from OpenStreetMap, which has no prices or ratings: a stay is chosen for the planned price level and for being near the next day's places, not for its quality.",
+    "A hotel 3-8 km outside the centre is assumed to cost 25% less.",
+    "The traveller reaches the city early on day 1, goes to the first night's hotel and leaves the bags at the desk (15 min; check-in is later), and is at breakfast by 09:00. On the last day the bags stay at the hotel desk after check-out and are collected in the evening. Arrival and departure travel to the city are not planned.",
+    "Each day runs from 09:00 (breakfast, 45 min); sightseeing ends by 19:00, and a place that would end later moves to 'If you have more time'. Lunch (60 min) comes between 11:30 and 14:30, followed by 1 h of rest; the evening meal is at 19:30.",
+    "Visit lengths are assumed by kind of place (fort, fortress, zoo 2 h 30 min; palace 2 h; museum, gallery, market 1 h 30 min; temple, mandir, lake 1 h; cenotaph, stepwell, baori 45 min; clock tower, gate, statue 30 min; other places 1 h). Travel: up to 1 km is walked at 4.5 km/h; longer trips go by road at 20 km/h plus 10 min to find a ride, with roads 1.3x the straight-line distance."
+  ],
+  "sources": [
+    "Open-Meteo geocoding and forecast: https://open-meteo.com",
+    "Wikipedia (places, descriptions, page views): https://en.wikipedia.org",
+    "OpenStreetMap via the Overpass API (stays and places to eat): https://www.openstreetmap.org",
+    "Wikivoyage: https://en.wikivoyage.org/wiki/Udaipur"
+  ],
+  "trace": [
+    {
+      "node": "extract",
+      "event": "llm_extract",
+      "detail": {
+        "destination": "Udaipur",
+        "start": null,
+        "end": null,
+        "days": 4,
+        "travellers": 2,
+        "budget_phrase": "max 15000 total",
+        "budget_amount": 15000.0,
+        "budget_amount_max": null,
+        "budget_is_per_person": false,
+        "budget_is_per_day": false,
+        "budget_direction": "at_most",
+        "budget_style": null,
+        "must_visit": [
+          "City Palace"
+        ],
+        "place_types": [
+          {
+            "words": "lakes",
+            "interests": [
+              "nature"
+            ]
+          }
+        ],
+        "interests": []
+      },
+      "duration_ms": 2623,
+      "timestamp": "2026-10-13T20:43:48.357919"
+    },
+    {
+      "node": "normalize",
+      "event": "normalize",
+      "detail": {
+        "days": 4,
+        "nights": 3,
+        "start_date": "2026-10-14",
+        "travellers": 2,
+        "total_budget": 15000.0,
+        "notes_added": 1
+      },
+      "duration_ms": 0,
+      "timestamp": "2026-10-13T20:43:48.363072"
+    },
+    {
+      "node": "planner",
+      "event": "plan",
+      "detail": {
+        "facts": "Trip facts:\n  Destination: \"Udaipur\" (not in the list of Indian states)\n  Dates: 14 Oct – 17 Oct 2026, 4 days; the trip starts in 1 day; a forecast IS available\n  Travellers: 2\n  Budget: target Rs 15,000 for the whole group, must not cost more than Rs 15,000\n  Style: not stated\n  Must visit: City Palace\n  Kinds of place: \"lakes\" (nature)\n  Purposes: nature (already served by a kind of place)",
+        "summary": "4 days in Udaipur around the City Palace and lakes.",
+        "steps": [
+          {
+            "step": 1,
+            "tool": "resolve_destination",
+            "query": null,
+            "serves": null,
+            "reason": "Find Udaipur on the map; every later step searches around it."
+          },
+          {
+            "step": 2,
+            "tool": "weather",
+            "query": null,
+            "serves": null,
+            "reason": "The trip starts in 1 day, so the forecast can guide outdoor plans."
+          },
+          {
+            "step": 3,
+            "tool": "locate_place",
+            "query": "City Palace",
+            "serves": "must_visit",
+            "reason": "You must see the City Palace."
+          },
+          {
+            "step": 4,
+            "tool": "find_places",
+            "query": "lake",
+            "serves": "place_type",
+            "reason": "You want to visit lakes; 'lake' is what such a place is called."
+          },
+          {
+            "step": 5,
+            "tool": "find_places",
+            "query": "tourist attraction",
+            "serves": "popular",
+            "reason": "Fill the free time with Udaipur's best-known sights."
+          },
+          {
+            "step": 6,
+            "tool": "build_itinerary",
+            "query": null,
+            "serves": null,
+            "reason": "Put the places into days, most important first."
+          },
+          {
+            "step": 7,
+            "tool": "find_stays_and_food",
+            "query": null,
+            "serves": null,
+            "reason": "Find a stay near each next day's sights and places to eat near the day's route."
+          },
+          {
+            "step": 8,
+            "tool": "estimate_costs",
+            "query": null,
+            "serves": null,
+            "reason": "Price the stay, food, travel and tickets."
+          },
+          {
+            "step": 9,
+            "tool": "check_budget",
+            "query": null,
+            "serves": null,
+            "reason": "Compare the cost with your budget."
+          }
+        ]
+      },
+      "duration_ms": 3126,
+      "timestamp": "2026-10-13T20:43:51.492121"
+    },
+    {
+      "node": "executor",
+      "event": "wikivoyage_ok",
+      "detail": {
+        "args": [
+          "Udaipur"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1170,
+      "timestamp": "2026-10-13T20:43:52.671437"
+    },
+    {
+      "node": "executor",
+      "event": "geocode_ok",
+      "detail": {
+        "args": [
+          "Udaipur"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 940,
+      "timestamp": "2026-10-13T20:43:53.611563"
+    },
+    {
+      "node": "executor",
+      "event": "weather_ok",
+      "detail": {
+        "args": [
+          "name='Udaipur' lat=24.58584 lon=73.71346 region='Rajasthan' feature_code='PPL' population=451100 source='Open-Meteo geocoding'",
+          "2026-10-14",
+          "2026-10-17",
+          "2026-10-13"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1230,
+      "timestamp": "2026-10-13T20:43:54.842216"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "City Palace",
+          "name='Udaipur' lat=24.58584 lon=73.71346 region='Rajasthan' feature_code='PPL' population=451100 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 2
+      },
+      "duration_ms": 2145,
+      "timestamp": "2026-10-13T20:43:56.988039"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "lake",
+          "name='Udaipur' lat=24.58584 lon=73.71346 region='Rajasthan' feature_code='PPL' population=451100 source='Open-Meteo geocoding'"
+        ],
+        "attempts": 1
+      },
+      "duration_ms": 1168,
+      "timestamp": "2026-10-13T20:43:58.157657"
+    },
+    {
+      "node": "executor",
+      "event": "places_ok",
+      "detail": {
+        "args": [
+          "tourist attraction",
+          "name='Udaipur' lat=24.58584 lon=73.71346 region='Rajasthan' feature_code='PPL' population=451100 source='Open-Meteo geocoding'",
+          "12",
+          "{'history'}"
+        ],
+        "attempts": 2
+      },
+      "duration_ms": 2867,
+      "timestamp": "2026-10-13T20:44:01.025319"
+    },
+    {
+      "node": "find_stays_and_food",
+      "event": "osm_ok",
+      "detail": {
+        "args": [
+          "[(24.575132933333336, 73.68063526666667), (24.569209833333332, 73.6806228), (24.5865009, 73.67796550999999), (24.591564593333334, 73.72097414666666)]",
+          "[(24.576, 73.68), (24.57507, 73.68022), (24.5743288, 73.6816858), (24.572, 73.679), (24.5672, 73.6781), (24.5684295, 73.6847684), (24.6, 73.67), (24.5796687, 73.6800357), (24.579834, 73.68386083), (24.616105, 73.622127), (24.58777778, 73.71944444), (24.570811, 73.821351)]"
+        ],
+        "attempts": 2,
+        "found": {
+          "cafe": 25,
+          "fast_food": 7,
+          "food_court": 0,
+          "guest_house": 30,
+          "hostel": 22,
+          "hotel": 119,
+          "restaurant": 86
+        },
+        "server": "overpass-api.de"
+      },
+      "duration_ms": 22784,
+      "timestamp": "2026-10-13T20:44:23.818086"
+    },
+    {
+      "node": "budget_check",
+      "event": "cost",
+      "detail": {
+        "total": 27000.0,
+        "status": "over",
+        "gap": 12000.0,
+        "choices": {
+          "hotel_tier": "mid",
+          "food_tier": "mid",
+          "transport": "cab",
+          "hotel_outside_centre": false
+        }
+      },
+      "duration_ms": null,
+      "timestamp": "2026-10-13T20:44:23.825070"
+    },
+    {
+      "node": "replanner",
+      "event": "replan",
+      "detail": {
+        "round": 1,
+        "chosen": [
+          "lower_hotel",
+          "lower_food"
+        ],
+        "applied": [
+          "mid -> budget hotel and cab",
+          "mid -> budget meals"
+        ],
+        "ignored": [],
+        "reason": "You did not specify a particular comfort level, so switching to a budget hotel and opting for simpler meals together save Rs 13,000, which brings the trip cost much closer to your budget.",
+        "cost_before": 27000.0,
+        "cost_after": 14000.0,
+        "status": "within"
+      },
+      "duration_ms": 1248,
+      "timestamp": "2026-10-13T20:44:25.081819"
+    },
+    {
+      "node": "budget_check",
+      "event": "cost",
+      "detail": {
+        "total": 14000.0,
+        "status": "within",
+        "gap": 0,
+        "choices": {
+          "hotel_tier": "budget",
+          "food_tier": "budget",
+          "transport": "cab",
+          "hotel_outside_centre": false
+        }
+      },
+      "duration_ms": null,
+      "timestamp": "2026-10-13T20:44:25.083824"
+    }
+  ]
+}

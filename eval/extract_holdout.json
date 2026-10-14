@@ -1,0 +1,217 @@
+{
+  "today": "2026-10-12",
+  "note": "HOLDOUT cases for the extract step. Written after the prompt; no city or phrase overlaps the prompt or the dev set. Run once per prompt version and do not tune the prompt on these. | 2026-10-13: dates are now DateRefs (LLM) resolved by code; raw start_date/end_date expectations were moved to expect_final with the same values, and 'not stated' became start/end = null.",
+  "cases": [
+    {
+      "id": "HO-01",
+      "goal": "Planning 3 days in Nainital with my wife and two kids, about 25000, lakes and boating",
+      "expect": {
+        "destination": "Nainital",
+        "days": 3,
+        "travellers": 4,
+        "budget_amount": 25000,
+        "budget_is_per_person": false,
+        "budget_is_per_day": false,
+        "budget_direction": "about",
+        "place_types": [
+          "lakes",
+          "boating"
+        ],
+        "interests__includes": [
+          "nature"
+        ],
+        "must_visit": []
+      }
+    },
+    {
+      "id": "HO-02",
+      "goal": "Agra on Thursday for a day, Taj Mahal and Agra Fort, budget 5000 per person",
+      "expect": {
+        "destination": "Agra",
+        "days": 1,
+        "budget_amount": 5000,
+        "budget_is_per_person": true,
+        "budget_direction": "not_stated",
+        "must_visit": [
+          "Taj Mahal",
+          "Agra Fort"
+        ],
+        "place_types": [],
+        "interests": []
+      },
+      "expect_final": {
+        "start_date": "2026-10-15",
+        "end_date": "2026-10-15"
+      }
+    },
+    {
+      "id": "HO-03",
+      "goal": "Spend 15 to 19 November in Munnar, tea plantations and trekking, not exceeding 40k",
+      "expect": {
+        "destination": "Munnar",
+        "days": null,
+        "budget_amount": 40000,
+        "budget_direction": "at_most",
+        "place_types": [
+          "tea plantations",
+          "trekking"
+        ],
+        "interests__includes": [
+          "nature",
+          "adventure"
+        ]
+      },
+      "expect_final": {
+        "start_date": "2026-11-15",
+        "end_date": "2026-11-19"
+      }
+    },
+    {
+      "id": "HO-04",
+      "goal": "Meghalaya for a week, living root bridges and caves, solo backpacking",
+      "expect": {
+        "destination": "Meghalaya",
+        "days": 7,
+        "travellers": 1,
+        "budget_style": "budget",
+        "budget_amount": null,
+        "place_types": [
+          "living root bridges",
+          "caves"
+        ],
+        "must_visit": []
+      }
+    },
+    {
+      "id": "HO-05",
+      "goal": "Pune trip next weekend with 3 friends, cafes and nightlife, Rs 3500 each",
+      "expect": {
+        "destination": "Pune",
+        "days": null,
+        "travellers": 4,
+        "budget_amount": 3500,
+        "budget_is_per_person": true,
+        "budget_is_per_day": false,
+        "interests__includes": [
+          "food",
+          "nightlife"
+        ]
+      },
+      "expect_final": {
+        "start_date": "2026-10-24",
+        "end_date": "2026-10-25"
+      }
+    },
+    {
+      "id": "HO-06",
+      "goal": "Puri from 2 Jan for 3 days, Jagannath Temple and the beach",
+      "edge": "year rollover: 2 Jan has already passed this year, so it must be 2027",
+      "expect": {
+        "destination": "Puri",
+        "days": 3,
+        "must_visit": [
+          "Jagannath Temple"
+        ],
+        "place_types": [
+          "beach"
+        ],
+        "end": null
+      },
+      "expect_final": {
+        "start_date": "2027-01-02"
+      }
+    },
+    {
+      "id": "HO-07",
+      "goal": "Jodhpur 4 days, 8000 a day for the two of us, premium hotels, must see Mehrangarh Fort",
+      "expect": {
+        "destination": "Jodhpur",
+        "days": 4,
+        "travellers": 2,
+        "budget_amount": 8000,
+        "budget_is_per_day": true,
+        "budget_is_per_person": false,
+        "budget_style": "luxury",
+        "must_visit": [
+          "Mehrangarh Fort"
+        ]
+      }
+    },
+    {
+      "id": "HO-08",
+      "goal": "Tamil Nadu temple tour",
+      "expect": {
+        "destination": "Tamil Nadu",
+        "days": null,
+        "travellers": null,
+        "budget_amount": null,
+        "interests": [
+          "religious"
+        ],
+        "must_visit": [],
+        "start": null
+      }
+    },
+    {
+      "id": "HO-09",
+      "goal": "I'd like a relaxing holiday somewhere with beaches in December",
+      "edge": "no destination, and a month without a day is not a date",
+      "expect": {
+        "destination": null,
+        "place_types": [
+          "beaches"
+        ],
+        "start": null,
+        "end": null
+      },
+      "expect_status": "needs_city"
+    },
+    {
+      "id": "HO-10",
+      "goal": "Haridwar 5 days from 20 Oct to 22 Oct",
+      "edge": "length and dates disagree; both must be recorded as said",
+      "expect": {
+        "destination": "Haridwar",
+        "days": 5
+      },
+      "expect_final": {
+        "start_date": "2026-10-20",
+        "end_date": "2026-10-22"
+      }
+    },
+    {
+      "id": "HO-11",
+      "goal": "Mount Abu for 2 days, 1 lakh 20 thousand max for 6 people",
+      "edge": "compound Indian number",
+      "expect": {
+        "destination": "Mount Abu",
+        "days": 2,
+        "travellers": 6,
+        "budget_amount": 120000,
+        "budget_direction": "at_most",
+        "budget_is_per_person": false
+      }
+    },
+    {
+      "id": "HO-12",
+      "goal": "Port Blair this weekend, scuba diving, roughly 18k per person per day",
+      "expect": {
+        "destination": "Port Blair",
+        "budget_amount": 18000,
+        "budget_is_per_person": true,
+        "budget_is_per_day": true,
+        "budget_direction": "about",
+        "place_types": [
+          "scuba diving"
+        ],
+        "interests__includes": [
+          "adventure"
+        ]
+      },
+      "expect_final": {
+        "start_date": "2026-10-17",
+        "end_date": "2026-10-18"
+      }
+    }
+  ]
+}
