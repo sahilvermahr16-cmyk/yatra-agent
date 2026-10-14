@@ -9,6 +9,8 @@ A trip planner for India that works like an agent. You write your trip in plain 
 5. keeps the trip inside your budget,
 6. gives you a day-by-day plan as a report (Markdown + JSON).
 
+**[1-page write-up](docs/writeup.pdf)** · **[Architecture diagram](docs/architecture.png)** · **[Sample runs](samples/)**
+
 ```
 python run.py "3 days in Jodhpur next weekend, must see Mehrangarh Fort, love stepwells and street food, under 20k for two"
 ```
